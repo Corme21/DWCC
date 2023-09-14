@@ -12,3 +12,14 @@ let edad = prompt("Introduce la edad:");
 
 document.write(`<strong>Nombre: \"${nombre}\"</br>Apellidos: ${apellidos}</br>Edad: ${edad}</strong>`);
 
+console.log(typeof(edad));
+
+var ano = 2023;
+
+document.write(`</br>Ano de nacemento:  ${ano-Number(edad)}`);
+
+let mensaxe = "¿Estas seguro de querer eliminar?";
+
+let resposta = confirm(mensaxe);
+
+console.log(`Resposta do cadro de dialogo:${resposta}`);
