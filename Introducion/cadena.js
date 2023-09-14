@@ -33,3 +33,12 @@ console.log(typeof(min));
 var prueba = 7 * "5";
 
 console.log(typeof(prueba));
+
+//Desplazamiento
+var a = 0b111;
+
+var b = 0b010;
+
+a ^= b;
+
+console.log(a);

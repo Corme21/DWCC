@@ -22,4 +22,8 @@ let mensaxe = "¿Estas seguro de querer eliminar?";
 
 let resposta = confirm(mensaxe);
 
-console.log(`Resposta do cadro de dialogo:${resposta}`);
+console.log(`Resposta do cadro de dialogo: ${resposta}`);
+
+const PI = 3.14159;
+
+alert(`Lembra usar esta aproximacion nos teus cálculos : ${PI}`);
