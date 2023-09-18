@@ -134,6 +134,7 @@ a) imprime a suma de dos numeros pedidos por pantalla
 b) imprime el factorial do numero por pantalla
 c) imprime la division dos numeros pedidos por pantalla
 */
+/*
 let num1 = prompt("Escribe un numero:");
 
 let num2 = prompt("Escribe otro numero:");
@@ -158,4 +159,46 @@ switch(opcion){
         var division = Number(num1) / Number(num2);
         console.log("La división de los numeros pedidos es " + division);
         break;
+}
+*/
+
+let texto3 = "Oso";
+
+let texto4 = "Ñu";
+
+console.log(texto3.localeCompare(texto4,"es"));
+
+let texto = "casa";
+
+console.log(texto.length)
+
+console.log(texto3.toUpperCase());
+
+let texto1 = "dime onde está o texto";
+
+document.write(texto1.lastIndexOf("a"));
+
+var texto5 = "Esta é unha estructura estatica";
+
+console.log(texto5.slice(3,10));
+
+/*
+Pedir texto
+texto a buscar
+resultado de numero de veces salga
+*/
+
+
+let texto6 = prompt("Introduce un texto:");
+
+let caracter = prompt("Introduce un caracter:");
+
+var conta = 0;
+
+var posicion = texto6.indexOf(caracter);
+
+while(posicion!=-1){
+    conta++;
+    console.log(conta);
+    posicion = texto6.indexOf(caracter, posicion+1);
 }
