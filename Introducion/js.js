@@ -18,12 +18,13 @@ var ano = 2023;
 
 document.write(`</br>Ano de nacemento:  ${ano-Number(edad)}`);
 
-let mensaxe = "¿Estas seguro de querer eliminar?";
+/*let mensaxe = "¿Estas seguro de querer eliminar?";
+*
+*let resposta = confirm(mensaxe);
+*
+*console.log(`Resposta do cadro de dialogo: ${resposta}`);
+*/
 
-let resposta = confirm(mensaxe);
+let mesaxe = (edad>18) ? "Maior" : "Menor";
 
-console.log(`Resposta do cadro de dialogo: ${resposta}`);
-
-const PI = 3.14159;
-
-alert(`Lembra usar esta aproximacion nos teus cálculos : ${PI}`);
+console.log(`O usuario é ${mesaxe} de idade`);
