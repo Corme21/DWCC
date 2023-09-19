@@ -72,7 +72,7 @@ console.log(soldoTotal);
 //Ejercicio 7
 let fahrenheit = prompt("Introduce la temperatura en grados Fahrenheit: ");
 
-let celsius = (Number(fahrenheit) -32) *5/9;
+let celsius = (Number(fahrenheit) -32) * 5 / 9;
 
 console.log(celsius);
 
