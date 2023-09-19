@@ -70,4 +70,45 @@ var soldoTotal = soldoBase + comisionTotal;
 console.log(soldoTotal);
 
 //Ejercicio 7
+let fahrenheit = prompt("Introduce la temperatura en grados Fahrenheit: ");
 
+let celsius = (Number(fahrenheit) - Number(fahrenheit));
+
+console.log(celsius);
+
+//Ejercicio 8
+let peso = prompt("Introduce su peso: ");
+
+let altura = prompt("Introduce a altura: ");
+
+let edad = prompt("Introduce a idade");
+
+var indicMasCorp = (10 * peso) + (6.25 * altura) - (5 * edad);
+
+document.write(`
+    </br><table border="1"> 
+        <tr> 
+            <th>Peso</th>
+            <th>Altura</th>
+            <th>Edad</th>
+            <th>IMC</th>
+        </tr>
+        <tr>
+            <td>` + peso + `</td>
+            <td>` + altura + `</td>
+            <td>` + edad + `</td>
+            <td>` + indicMasCorp + `</td>
+        </tr>
+    </table>`);
+
+//Ejercicio 9
+var numero = 1234;
+
+var millares = numero/1000;
+var centenas = numero%1000/100;
+var decenas = numero%1000/10;
+var unidades = numero%1000/1;
+
+document.write(`</br>` + numero);
+
+document.write(`</br>O numero introducido ten ${millares}millares, ${centenas}centenas, ${decenas}decenas e ${unidades}unidades`);
