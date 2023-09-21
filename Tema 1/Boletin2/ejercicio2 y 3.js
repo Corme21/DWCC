@@ -12,7 +12,7 @@ switch(figura){
         
     case "triangulo":
         var altura = prompt("Introduce la altura");
-        var base = prompt("Introduce el largo");
+        var base = prompt("Introduce la base");
         var superficie1 = base * altura / 2;
         document.write(superficie1);
         break; 
@@ -39,7 +39,7 @@ switch(figura2){
         
     case "triangulo":
         var altura = prompt("Introduce la altura");
-        var base = prompt("Introduce el largo");
+        var base = prompt("Introduce la base");
         var superficie2 = base * altura / 2;
         document.write(`</br>${superficie2}`);
         break; 
