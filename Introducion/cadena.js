@@ -188,7 +188,7 @@ texto a buscar
 resultado de numero de veces salga
 */
 
-
+/*
 let texto6 = prompt("Introduce un texto:");
 
 let caracter = prompt("Introduce un caracter:");
@@ -202,3 +202,80 @@ while(posicion!=-1){
     console.log(conta);
     posicion = texto6.indexOf(caracter, posicion+1);
 }
+*/
+
+//Array estatico
+var arrayPrueba = [
+    ["Manzana", 2],
+    ["Naranja",4],
+    ["Pera", 6]
+];
+
+document.write(`<table border="1" id="tab">
+    <tr>
+        <th>Fruta</th>
+        <th>Precio</th>
+    <tr>
+    <tr>
+        <td>${arrayPrueba[0][0]}</td>
+        <td>${arrayPrueba[0][1]}</td>
+    </tr>
+    <tr>
+        <td>${arrayPrueba[1][0]}</td>
+        <td>${arrayPrueba[1][1]}</td>
+    </tr>
+    <tr>
+        <td>${arrayPrueba[2][0]}</td>
+        <td>${arrayPrueba[2][1]}</td>
+    </tr>
+</table>
+`);
+
+/*
+nueva_fruta = prompt("Introduce la nueva fruta: ");
+nuevo_precio = prompt(`Introduce el precio de ${nueva_fruta}: `);
+
+arrayPrueba.push({nueva_fruta, nuevo_precio});
+
+for(let i = 0; i < arrayPrueba.length; i++){
+    for(var j = 0; j <= arrayPrueba[i].length; i++){
+        document.write(<tr>);
+    }
+}
+*/
+
+let idades = Array(18, 21, 34, 12, 92);
+
+for(let p = 0; p < idades.length; p++){
+    document.write(`${idades[p]}</br>`);
+}
+
+document.write("------------------------------");
+
+let precios = Array(69.99, 12.49, 35.20, 99.90);
+
+for(let t = 0; t < precios.length; t++){
+    console.log(`El precio ${t} es ${precios[t]}`);
+}
+/*
+for(let t in precios){
+    console.log(`El precio ${t} es ${precios[t]}`);
+}
+
+for(let precio of precios){
+    console.log(precio);
+}
+*/
+
+var empleados = [
+    ["Jesus", "Allo"],
+    ["Ana", "Castro"],
+    ["Adrian", "Mendez"]
+];
+
+for(let j = 0; j < empleados.length; j++){
+    for(k = 0; k < empleados[j].length; k++){
+        console.log(`Empleado: ${empleados[j]} Apellidos: ${empleados[k]}`);
+    }
+}
+
