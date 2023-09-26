@@ -268,14 +268,21 @@ for(let precio of precios){
 */
 
 var empleados = [
-    ["Jesus", "Allo"],
-    ["Ana", "Castro"],
-    ["Adrian", "Mendez"]
+    ["Jesus", "Allo", 1300],
+    ["Ana", "Castro", 1200],
+    ["Adrian", "Mendez", 1100]
 ];
 
 for(let j = 0; j < empleados.length; j++){
-    for(k = 0; k < empleados[j].length; k++){
-        console.log(`Empleado: ${empleados[j]} Apellidos: ${empleados[k]}`);
-    }
+    var nombre = empleados[j][0];
+    var apellidos = empleados[j][1];
+    var salario = empleados[j][2];
+    console.log(`Empleado: ${nombre} Apellidos: ${apellidos} Salario:${salario}`);
 }
+
+let senIVA = [20.45, 39.95, 6.69];
+let conIVA = senIVA;
+conIVA[0] = 110.25;
+console.log(conIVA);
+console.log(senIVA);
 
