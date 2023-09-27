@@ -286,3 +286,10 @@ conIVA[0] = 110.25;
 console.log(conIVA);
 console.log(senIVA);
 
+array1 = [1, 2, 3, 4];
+array2 = array1.slice();
+array2[0] = 4;
+
+console.log(array1);
+console.log(array2);
+
