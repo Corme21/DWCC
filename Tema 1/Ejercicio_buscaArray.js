@@ -17,5 +17,6 @@ while(resultado !== -1){
     contador++;
     resultado = array.indexOf(buscar, resultado + 1);
 }
+
 document.write(resultado);
 
