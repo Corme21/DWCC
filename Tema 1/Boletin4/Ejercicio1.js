@@ -1,5 +1,4 @@
 //Escribe un programa que tome unha cadea como argumento e devolva a lonxitude desa cadea.
+var cadena = prompt("Escribe una texto");
 
-var cadena = "Hola a todo el mundo";
-
-document.write(`La longitud del texto`);
+document.write(`La longitud del texto es ${cadena.length}`);
