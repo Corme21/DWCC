@@ -250,7 +250,7 @@ for(let p = 0; p < idades.length; p++){
     document.write(`${idades[p]}</br>`);
 }
 
-document.write("------------------------------");
+document.write("------------------------------</br>");
 
 let precios = Array(69.99, 12.49, 35.20, 99.90);
 
@@ -292,4 +292,17 @@ array2[0] = 4;
 
 console.log(array1);
 console.log(array2);
+
+let persona1 = prompt("Escribe el primer nombre");
+let persona2 = prompt("Escribe el segundo nombre");
+let persona3 = prompt("Escribe el tercer nombre");
+let persona4 = prompt("Escribe el cuarto nombre");
+let persona5 = prompt("Escribe el quinto nombre");
+
+
+let arrayNombres = [persona1, persona2, persona3, persona4, persona5];
+
+//document.write(arrayNombres.sort());
+
+document.write(arrayNombres.reverse());
 
