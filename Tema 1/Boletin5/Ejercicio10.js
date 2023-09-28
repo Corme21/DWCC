@@ -17,4 +17,10 @@ for(let i = 0; i < elementos.length; i++){
 }
 media = elementos.length;
 
+contador = 0;
+
+if(elementos[i] > media){
+    contador++;
+}
+document.write(`${contador} son mayores a la media`);
 console.log(media);
