@@ -293,16 +293,26 @@ array2[0] = 4;
 console.log(array1);
 console.log(array2);
 
-let persona1 = prompt("Escribe el primer nombre");
-let persona2 = prompt("Escribe el segundo nombre");
-let persona3 = prompt("Escribe el tercer nombre");
-let persona4 = prompt("Escribe el cuarto nombre");
-let persona5 = prompt("Escribe el quinto nombre");
+// let persona1 = prompt("Escribe el primer nombre");
+// let persona2 = prompt("Escribe el segundo nombre");
+// let persona3 = prompt("Escribe el tercer nombre");
+// let persona4 = prompt("Escribe el cuarto nombre");
+// let persona5 = prompt("Escribe el quinto nombre");
 
 
-let arrayNombres = [persona1, persona2, persona3, persona4, persona5];
+// let arrayNombres = [persona1, persona2, persona3, persona4, persona5];
 
-//document.write(arrayNombres.sort());
+// //document.write(arrayNombres.sort());
 
-document.write(arrayNombres.reverse());
+// document.write(arrayNombres.reverse());
 
+var personas = new Set();
+
+for(let i = 0; i < 10; i++){
+    let nombre = prompt("Introduce el nombre de la persona");
+    personas.add(nombre);
+}
+
+console.log(personas);
+
+    
