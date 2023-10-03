@@ -6,8 +6,10 @@ let cantidad = prompt("Introduce el tamaño del vector");
 
 var vectorRandom = [];
 
-for(let i = 0; i < Number.cantidad; i++){
-    vectorRandom = [(Math.random() *100)];
+var contador = 0;
+
+for(let i = 0; i < cantidad; i++){
+    vectorRandom.push(Math.random() *100);
 }
 
 console.log(vectorRandom);

@@ -306,13 +306,21 @@ console.log(array2);
 
 // document.write(arrayNombres.reverse());
 
-var personas = new Set();
+// var personas = new Set();
 
-for(let i = 0; i < 10; i++){
-    let nombre = prompt("Introduce el nombre de la persona");
-    personas.add(nombre);
+// for(let i = 0; i < 10; i++){
+//     let nombre = prompt("Introduce el nombre de la persona");
+//     personas.add(nombre);
+// }
+
+// console.log(personas);
+
+const mapa = new Map([
+    [678688456, "Elena"],
+    [981738103, "Juan"]
+]);
+
+for(let[telefono,person] of mapa){
+    console.log(`O telefono de ${person} es ${telefono}`);
 }
 
-console.log(personas);
-
-    

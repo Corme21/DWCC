@@ -6,6 +6,16 @@ var matriz = [
     [9,10,11,12]
 ];
 
-var matrizCombi = matriz;
+var matrizTransp = [];
 
-document.write(matrizCombi);
+for(let i = 0; i < matriz[0].length; i++){
+    matrizTransp.push([]);
+}
+
+for(let i = 0; i < matriz.length; i++){
+    for(let o = 0; o < matriz[i].length; o++){
+        matrizTransp[o].push(matriz[i][o]);
+    }
+}
+
+console.log(matrizTransp);

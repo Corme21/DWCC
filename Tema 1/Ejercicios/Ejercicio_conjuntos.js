@@ -20,24 +20,24 @@ var cidades = new Set(["Sevilla", "A Coruña", "Murcia"]);
     const opcion = prompt("Elige una opcion")
 
     switch(opcion){
-        case 1:
+        case "1":
             let nombreAñadir = prompt("Escribe o nome da cidade");
             cidades.add(nombreAñadir);
             break;
-        case 2:
+        case "2":
             for(let elemento of cidades){
                 console.log(elemento);
             }
             break;
-        case 3:
+        case "3":
             let nombreBusca = prompt("Escribe o nome da cidade");
             cidades.has(nombreBusca);
             break;
-        case 4:
+        case "4":
             let nombreBorrar = prompt("Escribe o nome da cidade");
             cidades.delete(nombreBorrar);
             break;  
-        case 5:
+        case "5":
             
             break;
     }
