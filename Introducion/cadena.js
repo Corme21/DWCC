@@ -317,10 +317,27 @@ console.log(array2);
 
 const mapa = new Map([
     [678688456, "Elena"],
-    [981738103, "Juan"]
+    [981738103, "Juan"],
 ]);
+
+mapa.set(654321987, "Noel").set(789456123, "Ana");
+
+mapa.delete(654321987, "Noel");
 
 for(let[telefono,person] of mapa){
     console.log(`O telefono de ${person} es ${telefono}`);
 }
 
+for(let telefono of mapa.keys()){
+    console.log(telefono);
+}
+
+for(let person of mapa.values()){
+    console.log(person);
+}
+
+console.log(mapa.has(789456123));
+
+console.log(mapa.get(789456123));
+
+console.log([...mapa]);
