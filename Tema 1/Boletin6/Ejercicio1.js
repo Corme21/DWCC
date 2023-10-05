@@ -18,10 +18,21 @@ console.log("Betis - PSJ");
 console.log("Deportivo - Murcia");
 
 
-let partido = prompt("Selecciona el partido");
+let apuesta1 = prompt("Introduce tu apuesta para el Sevilla - Celta");
 
-let apuesta = prompt("Introduce tu apuesta.");
+let apuesta2 = prompt("Introduce tu apuesta para el Valencia - CastLeon");
 
-if(){
-    
-}
+let apuesta3 = prompt("Introduce tu apuesta para el Barca - Madrid");
+
+let apuesta4 = prompt("Introduce tu apuesta para el Betis - PSJ");
+
+let apuesta5 = prompt("Introduce tu apuesta para el Deportivo - Murcia");
+
+
+
+// if(Number(apuesta1) == partidos.get(1)){
+//     console.log("Has ganado");
+// }else{
+//     console.log("Has perdido.");
+// }
+
