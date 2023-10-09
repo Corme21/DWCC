@@ -2,3 +2,5 @@
 (é dicir, "hola" pasa a ser "aloh").
 */
 
+let palabra = prompt("Escribe una palabra");
+
