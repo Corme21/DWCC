@@ -15,25 +15,25 @@ var contadorU = 0;
 
 for(let i = 0; i < argumento.length; i++){
 
-    if(argumento.indexOf("a") == "a"){
+    if(argumento[i] == "a"){
         contadorA++;
-        
+        continue;
     }
-    if(argumento.indexOf("e") == "e"){
+    if(argumento[i] == "e"){
         contadorE++;
-        
+        continue;
     }
-    if(argumento.indexOf("i") == "i"){
+    if(argumento[i] == "i"){
         contadorI++;
-        
+        continue;
     }
-    if(argumento.indexOf("o") == "o"){
+    if(argumento[i] == "o"){
         contadorO++;
-       
+        continue;
     }
-    if(argumento.indexOf("u") == "u"){
+    if(argumento[i] == "u"){
         contadorU++;
-        
+        continue;
     }
 }
 

@@ -8,9 +8,13 @@ let texto = prompt("Escribe un texto");
 let textoCambiado = ""; 
 
 for(let i = 0; i < texto.length; i++){
-    if(texto[i] == "a" || texto[i] == "e" || texto[i] == "i" || texto[i] == "o" || texto[i] == "u" ||
-    texto[i] == "A" || texto[i] == "E" || texto[i] == "I" || texto[i] == "O" || texto[i] == "u" ){
-        textoCambiado += texto[i].replace(" ");
+
+    var caracter = texto[i];
+    
+    if("AEIOUaeiou".indexOf(caracter) !== -1){
+        textoCambiado += " ";
+    }else{
+        textoCambiado += caracter;
     }
     
 }

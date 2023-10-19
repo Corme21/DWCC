@@ -9,7 +9,9 @@ let frase = prompt("Escribe una frase");
 let fraseGrande = "";
 
 for(let i = 0; i < frase.length; i++){
-    fraseGrande += frase.replace[i]("o", frase.toUpperCase());
+    var letra = [i];
+
+    
 
 }
 
