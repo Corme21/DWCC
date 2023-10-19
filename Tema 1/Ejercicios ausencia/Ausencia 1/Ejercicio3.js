@@ -32,6 +32,6 @@ for(let[fruta, precio] of compra){
 }
 document.write(`</br>Total: ${total} €`);
 
-let IVA = (total * 16) / 100;
+let IVA = ((total * 0.16) + total);
 
 document.write(`</br>Con IVA: ${IVA}€ (iva do 16%)`);
