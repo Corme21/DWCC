@@ -13,6 +13,5 @@ for(let i = 1; i <= 100; i++){
         numero++;
         document.write("</br>");
         multiplicar = 1;
-        continue;
     }
 }

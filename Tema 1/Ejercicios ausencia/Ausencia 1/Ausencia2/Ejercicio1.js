@@ -15,23 +15,23 @@ var contadorU = 0;
 
 for(let i = 0; i < argumento.length; i++){
 
-    if(argumento[i] == "a"){
+    if(argumento[i] == "a" || argumento[i] == "A"){
         contadorA++;
         continue;
     }
-    if(argumento[i] == "e"){
+    if(argumento[i] == "e" || argumento[i] == "E"){
         contadorE++;
         continue;
     }
-    if(argumento[i] == "i"){
+    if(argumento[i] == "i" || argumento[i] == "I"){
         contadorI++;
         continue;
     }
-    if(argumento[i] == "o"){
+    if(argumento[i] == "o" || argumento[i] == "O"){
         contadorO++;
         continue;
     }
-    if(argumento[i] == "u"){
+    if(argumento[i] == "u" || argumento[i] == "U"){
         contadorU++;
         continue;
     }
