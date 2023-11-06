@@ -132,7 +132,7 @@ bienvenido();
 
 /*
 Ejercicio votar
-*/
+
 
 var edad = prompt("Pon tu edad");
 
@@ -145,10 +145,11 @@ function votar(años){
 }
 
 votar(edad);
+*/
 
 /*
 Funcion que recib grados Farenheit a Celsius
-*/
+
 
 var Farenheit = prompt("Introduce la temperatura en Farenheit");
 
@@ -158,4 +159,17 @@ function cambioTemperatura(temperatura){
 }
 
 console.log(cambioTemperatura(Farenheit));
+*/
+
+//CallBack
+
+const saludo = function(){
+    return "Bienvenido de nuevo, ";
+};
+
+const usuario = function(callback){
+    console.log(callback() + "Jesus");
+}
+
+usuario(saludo);
 
