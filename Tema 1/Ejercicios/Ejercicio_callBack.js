@@ -8,8 +8,18 @@ Por exemplo: function sumarArray(arr, callback)
 
 let array = [1, 2, 3, 4, 5];
 
-function addArray(argumento1, argumento2){
+var suma = 0;
+
+const sumarArray = function(){
+    for(let i = 0; i < array.lenght; i++){
+        suma += array[i];
+    }
+
+    return "Bienvenido de nuevo, ";
+};
+
+function addArray(argumento1, callback){
     
 }
 
-addArray();
+addArray(array, sumarArray);
