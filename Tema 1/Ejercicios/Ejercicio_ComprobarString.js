@@ -22,8 +22,9 @@ function palindroma(string){
 if(palindroma(cadena) == false){
     console.log("No es palindroma");
 }else{
-    function contarLetras(){
-        let contador = 0;
+    function contarLetras(cadena){
+        let palabra = cadena;
 
+        
     }
 }
