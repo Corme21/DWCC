@@ -6,20 +6,20 @@ total.
 Por exemplo: function sumarArray(arr, callback)
 */
 
-let array = [1, 2, 3, 4, 5];
 
+let array = [1, 2, 3, 4, 5];
 var suma = 0;
 
 const sumarArray = function(){
+    
     for(let i = 0; i < array.lenght; i++){
         suma += array[i];
     }
-
-    return "Bienvenido de nuevo, ";
+    return suma;
 };
 
 function addArray(argumento1, callback){
-    
+    console.log(callback() + argumento1);
 }
 
 addArray(array, sumarArray);
