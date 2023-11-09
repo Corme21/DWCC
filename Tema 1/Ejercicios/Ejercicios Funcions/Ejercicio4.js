@@ -27,24 +27,25 @@ let array = [array1, array2, array3];
 console.log(array);
 
 function diagonalCero(arrayPrincipal){
-    for(let a = 0; a < arrayPrincipal.lenght; a++){
-        for(let e = 0; e < arrayPrincipal[a].lenght; e++){
+    for(let a = 0; a < arrayPrincipal.length; a++){
+        for(let e = 0; e < arrayPrincipal[a].length; e++){
+            if(arrayPrincipal[a] == 0){
+                arrayPrincipal[0][1] = 0;
+                arrayPrincipal[0][2] = 0;
+                console.log(arrayPrincipal[1]);
+            }
             if(arrayPrincipal[a] == 1){
-                arrayPrincipal[1] = 0;
-                arrayPrincipal[2] = 0;
+                arrayPrincipal[1][0] = 0;
+                arrayPrincipal[1][2] = 0;
+                console.log(arrayPrincipal[2]);
             }
             if(arrayPrincipal[a] == 2){
-                arrayPrincipal[0] = 0;
-                arrayPrincipal[2] = 0;
-            }
-            if(arrayPrincipal[a] == 3){
-                arrayPrincipal[0] = 0;
-                arrayPrincipal[1] = 0;
+                arrayPrincipal[2][0] = 0;
+                arrayPrincipal[2][1] = 0;
+                console.log(arrayPrincipal[3]);
             }
         }
-        console.log(arrayPrincipal);
     }
-    
 }
 
 diagonalCero(array);
