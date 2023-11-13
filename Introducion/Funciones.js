@@ -173,3 +173,44 @@ const usuario = function(callback){
 
 usuario(saludo);
 
+//Clausuras
+function mensaxe(){
+    let texto = "Hola de nuevo";
+    function muestraMensaxe(){
+        console.log(texto);
+    }
+    return muestraMensaxe;
+}
+
+let variable = mensaxe();
+
+variable();
+
+//Frecha
+const mensj = ()=> console.log("Hola");
+
+mensj();
+
+//Factorial de un numero sin recursividad
+// var num = Number(prompt("Escribe un numero"));
+
+// var factr = 1;
+
+// function dobleFactor(valor, factor){
+//     factr *= valor;
+//     console.log(doble(factr));
+// }
+
+// dobleFactor(num, factr);
+
+//Factorial de un numero con recursividad
+const factorial = (numero) =>{
+    if(numero == 1){
+        return 1
+    }else{
+        return numero * factorial(numero - 1);
+    }
+};
+
+console.log(factorial(3));
+
