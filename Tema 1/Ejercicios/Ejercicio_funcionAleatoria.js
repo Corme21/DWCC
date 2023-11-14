@@ -1,23 +1,23 @@
 /*
-Insertar en un array número aleatorios. El numero minimo de elementos del array se debe pedir
-desde teclado.
+Insertar en un array número aleatorios. El numero minimo e maximo de elementos del array se 
+debe pedir desde teclado.
 Facer co funcions frecha e recursividade.
 */
 
-let minimo = Number(prompt("Escribe el minimo de elementos"));
+let maximo = Number(prompt("Escribe el maximo de elementos"));
 
-let contador = 0;
+let minimo = Number(prompt("Escribe el minimo de elementos"));
 
 let arrayRandom = [];
 
-const aleatorioArray = (minimo, arrayRandom, contador)=>{
-    if(contador == minimo){
+const aleatorioArray = (maximo, arrayRandom, minimo)=>{
+    if(minimo == maximo){
         console.log(arrayRandom);
     }else{
         var numRandom = Math.floor(Math.random() * 100);
         arrayRandom.push(numRandom);
-        return aleatorioArray(minimo, arrayRandom, (contador+1))
+        return aleatorioArray(maximo, arrayRandom, (minimo+1));
     }
 }
 
-aleatorioArray(minimo, arrayRandom, contador);
+aleatorioArray(maximo, arrayRandom, minimo);
