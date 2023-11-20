@@ -35,6 +35,5 @@ let persoa = new Object();
 persoa.nombre = prompt("Escribe tu nombre");
 persoa.apellidos = prompt("Escribe tus apellidos");
 persoa.edad = Number(prompt("Escribe tu edad"));
-persoa.dataNace =  - persoa.edad;
-
+persoa.dataNace = 2023 - persoa.edad;
 
