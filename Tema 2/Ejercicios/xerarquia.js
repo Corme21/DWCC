@@ -48,11 +48,39 @@ class Movil extends Telefono{
     }
 }
 
+let arrayFijo = [];
+
+let arrayMobil = [];
+
+//Telefono
 let unTelefono = new Telefono(654987321);
 unTelefono.mostrar();
+
+//Fijo
+// for(let i = 0; i < 1; i++){
+// numero = prompt("Escribe tu numero");
+// marca = prompt("Marca del telefono");
+// prefijo = 
+// }
 
 let unFijo = new Fijo(654321, "Misterioso", 981, "si");
 unFijo.mostrar();
 
-let unMovil = new Movil();
+//Movil
+let unMovil = new Movil(654987321, "Cualquiera", 8);
+// for(elemento in Object.getOwnPropertyDescriptors(unMovil)){
+//     arrayMobil.push(elemento);
+// }
 unMovil.mostrar();
+
+console.log("");
+
+for(let valor of arrayFijo){
+    console.log(valor);
+}
+
+console.log("");
+
+for(elemento of arrayMobil){
+    console.log(elemento);
+}
