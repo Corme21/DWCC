@@ -58,11 +58,11 @@ class barco {
         }
     }
 
-    cargar(){
+    cargar(carga){
         if(this.carga == 0 || this.carga == ""){
             console.log("No tiene ninguna carga");
         }else if(this.carga > this.cargaMax){
-            this.carga = this.cargaMax;
+            this.carga = carga + this.cargaMax;
             console.log("Se a cargado hasta la cantidad maxima.");
         }else{
             console.log("La carga ya esta en el barco.");
