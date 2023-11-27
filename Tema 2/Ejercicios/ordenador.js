@@ -2,7 +2,7 @@
 Crea un obxecto chamado ordenador que teña os seguintes atributos:
 marca, un texto
 modelo, un texto
-memoria RAM, un numero que indica GB d ecapacidade.
+memoria RAM, un numero que indica GB de capacidade.
 Capacidad del disco duro, un numero que indica GB de capacidades
 Pulgadas de pantalla, un numero que indica as pulgadas.
 Método para este obxecto:
@@ -12,28 +12,10 @@ Ao crearun ordenador pódense indicar todos os valores por defecto da seguinte f
 */
 
 class ordenador {
+    ram = 4;
+    hhd = 512;
+    pantalla = 17;
     constructor(marca, modelo, ram, hhd, pantalla){
-        if(ram == undefined){
-            this.marca = marca;
-            this.modelo = modelo;
-            this.ram = 4;
-            this.hhd = hhd;
-            this.pantalla = pantalla;
-        }
-        if(hhd == undefined){
-            this.marca = marca;
-            this.modelo = modelo;
-            this.ram = ram;
-            this.hhd = 512;
-            this.pantalla = pantalla;
-        }
-        if(pantalla == undefined){
-            this.marca = marca;
-            this.modelo = modelo;
-            this.ram = ram;
-            this.hhd = hhd;
-            this.pantalla = 17;
-        }
         if(ram != undefined && hhd != undefined && pantalla != undefined){
             this.marca = marca;
             this.modelo = modelo;
@@ -51,3 +33,23 @@ class ordenador {
         console.log(`Pulgadas de la pantalla: ${this.pantalla} pulgadas`);
     }
 }
+
+let marca = prompt("Introduce la marca del ordenador");
+while(marca == "" || marca == undefined){
+    marca = prompt("Es necesario introducir la marca del ordenador");
+}
+
+let modelo = prompt("Introduce el modelo del oredenador");
+while(modelo == "" || modelo == undefined){
+    modelo = prompt("Es necesario introducir el modelo del ordenador");
+}
+
+let ram = prompt("Introduce la capacidad de la memoria RAM");
+
+let hhd = prompt("Introduce la capacidad del disco duro");
+
+let pantalla = prompt("Introduce las pulgadas de la pantalla");
+
+let miOrdenador = new ordenador(marca, modelo, ram, hhd, pantalla);
+
+miOrdenador.toString();
