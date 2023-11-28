@@ -26,10 +26,10 @@ class pelicula{
             this.director = directr;
             this.dataLanz = lanz;
             this.actores = actrs;
-            this.titulo = dinero;
+            this.titulo = title;
             this.presuposto = "";
         }
-        if(lanz != undefined && dinero != undefined){
+        else{
             this.director = directr;
             this.dataLanz = lanz;
             this.actores = actrs;
@@ -63,9 +63,22 @@ let actores = prompt("Introduce el nombre del actor");
 let nombre = prompt("Introduce el titulo de la pelicula");
 
 let presupuesto = prompt("Introduce el presupuesto");
+presupuesto = undefined;
 
 let miPelicula = new pelicula(director, lanzamento, actores, nombre, presupuesto);
+
+let miPelicula2 = new pelicula(director, lanzamento, actores, nombre);
+
+let miPelicula3 = new pelicula(director, lanzamento, actores, nombre);
 
 miPelicula.mostrar();
 
 miPelicula.edad();
+
+miPelicula2.mostrar();
+
+miPelicula2.edad();
+
+miPelicula3.mostrar();
+
+miPelicula3.edad();
