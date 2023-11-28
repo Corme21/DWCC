@@ -67,18 +67,27 @@ presupuesto = undefined;
 
 let miPelicula = new pelicula(director, lanzamento, actores, nombre, presupuesto);
 
-let miPelicula2 = new pelicula(director, lanzamento, actores, nombre);
-
-let miPelicula3 = new pelicula(director, lanzamento, actores, nombre);
-
 miPelicula.mostrar();
 
 miPelicula.edad();
 
-miPelicula2.mostrar();
+//Percorrer
+let vector = Object.values(miPelicula);
 
-miPelicula2.edad();
+for(let i = 0; i < vector.length; i++){
+    console.log(vector[i]);
+}
 
-miPelicula3.mostrar();
 
-miPelicula3.edad();
+
+// let miPelicula2 = new pelicula(director, lanzamento, actores, nombre);
+
+// let miPelicula3 = new pelicula(director, lanzamento, actores, nombre);
+
+// miPelicula2.mostrar();
+
+// miPelicula2.edad();
+
+// miPelicula3.mostrar();
+
+// miPelicula3.edad();
