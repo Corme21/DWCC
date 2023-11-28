@@ -130,3 +130,19 @@ unProfesor.cobrar();
 let unAlumno = new Alumno("Elena Sánchez", "06/03/2022", "finalizado", 11);
 unAlumno.cobrar();
 
+//recorrer
+
+// let miViaje = new Viaje("Barcelona", "Ibiza", 2, 112);
+// atributos = [];
+
+// let i = 0;
+
+// for(elemento in miViaje){
+//     atributos[i] = elemento;
+// }
+
+// valores = Object.values(miViaje);
+// for(i = 0; i < atributos.length; i++){
+//     document.write(atributos[i]+" : "+valores[i]);
+// }
+
