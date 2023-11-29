@@ -130,8 +130,7 @@ unProfesor.cobrar();
 let unAlumno = new Alumno("Elena Sánchez", "06/03/2022", "finalizado", 11);
 unAlumno.cobrar();
 
-//recorrer
-
+//Recorrer
 // let miViaje = new Viaje("Barcelona", "Ibiza", 2, 112);
 // atributos = [];
 
