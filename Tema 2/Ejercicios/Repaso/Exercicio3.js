@@ -13,7 +13,7 @@ palabras.push(frase.split(" "));
 
 console.log(palabras);
 
-function contar(){
+function contar(palabras){
     let contador = 0;
 
     let mapa = new Map();
@@ -26,7 +26,8 @@ function contar(){
     }
 
     for(let[palabra, cuenta] of mapa){
-        console.log();
+        console.log(`${palabra} = ${cuenta}`);
     }
 }
 
+contar(palabras);
