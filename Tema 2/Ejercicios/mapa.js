@@ -20,35 +20,58 @@ let libros = new Map([
     [2, "Lagrimas de Shiba"]
 ]);
 
-let persona = [["98765432z", "Pepe Problemas"], ["12345678a", "Jose el Fumador"]];
+class xente{
+    nombre;
+    dni;
+    constructor(nombre, dni){
+        this.nombre = nombre;
+        this.dni = dni;
+    }
+
+    observar(){
+        document.write(this.nombre);
+        document.write(this.dni);
+    }
+};
+
+let persona = [];
+for(let e = 0; e < 2; e++){
+    nombre = prompt("Escribe el nombre");
+    dni = prompt("Escribe el DNI");
+
+    let gente = new xente(nombre, dni);
+
+    persona.push(gente);
+}
+// ["98765432z", "Pepe Problemas"], ["12345678a", "Jose el Fumador"]
+
 
 let casa = new Object();
 casa.numero = 21;
 casa.poblacion = "Corme";
 
 if(libros instanceof Map){
-    console.log("Objeto tipo: Mapa");
+    document.write("<strong>Objeto tipo: Mapa</strong><br>");
+    document.write("Codigo - Titulo<br>");
     for(let [codigo, titulo] of libros){
-        console.log(`${codigo} - ${titulo}`);
+        document.write(`${codigo} - ${titulo}<br>`);
     }
-    console.log("");
+    document.write("<br>");
 }
 
 if(persona instanceof Array){
-    console.log("Objeto tipo: Array");
+    document.write("<strong>Objeto tipo: Array</strong><br>");
     for(let i = 0; i < persona.length; i++){
-        for(let a = 0; a < persona[i].length; a++){
-            console.log(persona[i][a]);
-        }
+        document.write(`${persona[i].observar()}<br>`);
     }
-    console.log("");
+    document.write("<br>");
 }
 
 if(casa instanceof Object){
     casa.mostrar = function(){
-        console.log("Objeto tipo: Objeto");
-        console.log(`Numero: ${casa.numero}`);
-        console.log(`Población: ${casa.poblacion}`);
+        document.write("<strong>Objeto tipo: Objeto</strong><br>");
+        document.write(`Numero: ${casa.numero}<br>`);
+        document.write(`Población: ${casa.poblacion}<br>`);
     }
 
     casa.mostrar();
