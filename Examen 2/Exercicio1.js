@@ -55,7 +55,7 @@ class almacen{
 
     //Creamos la funcion de compras
     comprar(){
-        let cantidad = prompt("Introduce la cantidad a comprae");
+        let cantidad = prompt("Introduce la cantidad a comprar");
 
         this.existencias += cantidad;
 
@@ -80,30 +80,33 @@ class almacen{
             document.write(`Proveedor: ${this.provedor}<br>`);
         }
         document.write(`Existencias actuais: ${this.existencias}<br>`);
-        document.write(`Data da ultima compra: ${this.ultimaCompra}`);
+        document.write(`Data da ultima compra: ${this.ultimaCompra}<br><br>`);
     }
 }
 
 //Pedimos por pantalla los datos
 let codigo = prompt("Introduce el codigo del producto");
 
-let nome = prompt("Introduce el codigo del producto");
+let nome = prompt("Introduce el nombre del producto");
 
-let provedor = prompt("Introduce el codigo del producto");
+let provedor = prompt("Introduce el proveedor");
 if(provedor == ""){
     provedor = undefined;
 }
 
-let ultimaVenta = prompt("Introduce el codigo del producto");
+let ultimaVenta = prompt("Introduce la fecha de la ultima venta");
 
-let ultimaCompra = prompt("Introduce el codigo del producto");
+let ultimaCompra = prompt("Introduce la fecha de la ultima compra");
 
+//Creamos os obxetos para a clase almacen
+//Un para as compras
 let miAlmacen = new almacen(codigo, nome, provedor, ultimaCompra);
 
 miAlmacen.comprar();
 
 miAlmacen.mostrar();
 
+//E outro para as vendas
 let miAlmacen2 = new almacen(codigo, nome, provedor, ultimaVenta);
 
 miAlmacen.vender();
