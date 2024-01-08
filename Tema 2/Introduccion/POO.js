@@ -156,3 +156,30 @@ console.log(fechaTodosParametros);
 console.log(fechaTresParametros);
 console.log(fechaUnParametros);
 
+//Prototipos
+function Viaje(origen, destino, dias, precio){
+    this.origen = origen;
+    this.destino = destino;
+    this.dias = dias;
+    this.precio = precio;
+    this.mostrar = function(){
+        console.log(`${this.origen} / ${this.destino}`);
+        console.log(`durante ${this.dias} dias: EUR${this.precio}`);
+    };
+};
+
+let viaje1 = new Viaje("Barcelona", "Ibiza", 2, 112);
+console.log(viaje1);
+
+//---------------------------------------------------------------------
+
+let miviaje = new Viaje("Barcelona", "Ibiza", 2, 112);
+console.log(Viaje.prototype);
+
+Viaje.prototype.costeDiario = function(){
+    return this.precio / this.dias; 
+};
+
+Viaje.prototype.descuento = "20%";
+console.log(Viaje.prototype);
+
