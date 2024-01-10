@@ -183,3 +183,49 @@ Viaje.prototype.costeDiario = function(){
 Viaje.prototype.descuento = "20%";
 console.log(Viaje.prototype);
 
+//Expresiones regulares
+let erObjeto = new RegExp('[0-9]');
+
+console.log(erObjeto.test("a"));
+console.log(erObjeto.test("almamia"));
+console.log(erObjeto.test("alma66mia"));
+console.log(erObjeto.test("987"));
+//modificador i
+let er = /a/;
+console.log(er.test("pizza"));//True
+console.log(er.test("TACO"));//False
+
+let er2 = /a/i;
+console.log(er2.test("pizza"));//True
+console.log(er2.test("TACO"));//True
+
+//modificador ^
+let er3 = /^a/;
+console.log(er3.test("pizza"));//False
+console.log(er3.test("TACO"));//False
+console.log(er3.test("armario"));//True
+
+//modificador$
+let er4 = /pon$/;
+console.log(er4.test("ponderado"));//False
+console.log(er4.test("posicion"));//False
+console.log(er4.test("tapon"));//True
+
+//Modificador .
+let er5 = /ar.on/;
+console.log(er5.test("arcon"));//True
+console.log(er5.test("arpon"));//True
+console.log(er5.test("Aaron"));
+//Modificador []
+let er6 = /aeiou/;
+console.log(er6.test("SOS"));//False
+console.log(er6.test("col"));//True
+console.log(er6.test("Pfff!"));//False
+//Modificador [^expresión]
+let erObjeto2 = new RegExp('^[0-9]');
+
+console.log(erObjeto2.test("a"));
+console.log(erObjeto2.test("almamia"));
+console.log(erObjeto2.test("alma66mia"));
+console.log(erObjeto2.test("987"));
+
