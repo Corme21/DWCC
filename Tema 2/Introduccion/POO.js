@@ -222,10 +222,14 @@ console.log(er6.test("SOS"));//False
 console.log(er6.test("col"));//True
 console.log(er6.test("Pfff!"));//False
 //Modificador [^expresión]
-let erObjeto2 = new RegExp('^[0-9]');
+let erObjeto2 = new RegExp('[^0-9]');
 
-console.log(erObjeto2.test("a"));
-console.log(erObjeto2.test("almamia"));
-console.log(erObjeto2.test("alma66mia"));
-console.log(erObjeto2.test("987"));
+console.log(erObjeto2.test("a"));//True
+console.log(erObjeto2.test("almamia"));//True
+console.log(erObjeto2.test("alma66mia"));//True
+console.log(erObjeto2.test("987"));//False
+
+//Modificador de cardinalidad
+let dni = /^[0-9]{8}[A-Z]{1}/i;
+console.log(dni.test("23955733Z"));
 
