@@ -186,10 +186,10 @@ console.log(Viaje.prototype);
 //Expresiones regulares
 let erObjeto = new RegExp('[0-9]');
 
-console.log(erObjeto.test("a"));
-console.log(erObjeto.test("almamia"));
-console.log(erObjeto.test("alma66mia"));
-console.log(erObjeto.test("987"));
+console.log(erObjeto.test("a"));//False
+console.log(erObjeto.test("almamia"));//False
+console.log(erObjeto.test("alma66mia"));//True
+console.log(erObjeto.test("987"));//True
 //modificador i
 let er = /a/;
 console.log(er.test("pizza"));//True
@@ -230,6 +230,12 @@ console.log(erObjeto2.test("alma66mia"));//True
 console.log(erObjeto2.test("987"));//False
 
 //Modificador de cardinalidad
-let dni = /^[0-9]{8}[A-Z]{1}/i;
+let dni = /^[0-9]{8}[A-Z]{1}$/i;
 console.log(dni.test("23955733Z"));
+
+let cif = /^[A-Z]{1}[0-9]{7}[A-Z0-9]$/;
+console.log(cif.test("G1234567K"));
+
+let cp = /^[0-9]{5}$/;
+console.log(cp.test("15114"));
 
