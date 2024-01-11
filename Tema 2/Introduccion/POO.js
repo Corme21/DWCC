@@ -231,11 +231,11 @@ console.log(erObjeto2.test("987"));//False
 
 //Modificador de cardinalidad
 let dni = /^[0-9]{8}[A-Z]{1}$/i;
-console.log(dni.test("23955733Z"));
+console.log(dni.test("23955733Z"));//True
 
 let cif = /^[A-Z]{1}[0-9]{7}[A-Z0-9]$/;
-console.log(cif.test("G1234567K"));
+console.log(cif.test("G1234567K"));//True
 
 let cp = /^[0-9]{5}$/;
-console.log(cp.test("15114"));
+console.log(cp.test("15114"));//True
 

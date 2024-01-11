@@ -41,9 +41,9 @@ let cp = /^[0-9]{5}$/;
 document.write("15114 ");
 document.write(cp.test("15114")+ "<br>");//true
 
-let email = /[A-Za-z][]gamil.com$/;
+let email = /^[A-Za-z0-9.]+@[a-z0-9.]+\.[a-z]{2,4}$/i;
 document.write("jesusallo.21@gmail.com ");
-document.write(email.test("jesusallo.21@gmail.com")+ "<br>");
+document.write(email.test("jesusallo.21@gmail.com")+ "<br>");//true
 
 //Prohibido numeros na cadea
 let prohibido = /^[^0-9]*$/;
