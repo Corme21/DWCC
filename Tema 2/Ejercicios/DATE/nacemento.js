@@ -15,3 +15,6 @@ let diaActual = getDay();
 
 let fechaActual = new Date(anoActual, mesActual, diaActual);
 
+let tiempo = fechaActual - fechaNace;
+
+document.write(tiempo);
