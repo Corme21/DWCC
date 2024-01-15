@@ -3,18 +3,28 @@ Utilizando o obxeto DATE solicita a data de nacemento por teclado e calcula o nu
 que pasaron dende a data de nacemento solicitada a actual. 
 */
 
-let anoNace = prompt("Ano do nacemento");
-let mesNace = prompt("Mes do nacemento");
-let diaNace = prompt("Dia do nacemento");
+let ano = prompt("Ano do nacemento");
+let mes = prompt("Mes do nacemento");
+let dia = prompt("Dia do nacemento");
 
-let fechaNace = new Date(anoNace, mesNace, diaNace);
+let fechaNace = new Date(ano, mes, dia);
 
-let anoActual = getFullYear();
-let mesActual = getMonth();
-let diaActual = getDay();
+console.log(fechaNace);
 
-let fechaActual = new Date(anoActual, mesActual, diaActual);
+let anoNace = fechaNace.getFullYear();
+let mesNace = fechaNace.getMonth();
+let diaNace = fechaNace.getDate();
 
-let tiempo = fechaActual - fechaNace;
+let Actual = Date.now();
 
-document.write(tiempo);
+let fechaActual = new Date(Actual);
+
+console.log(fechaActual);
+
+let anoActual = fechaActual.getFullYear();
+let mesActual = fechaActual.getMonth();
+let diaActual = fechaActual.getDate();
+
+// let tiempo = fechaActual - fechaNace;
+
+// document.write(tiempo);
