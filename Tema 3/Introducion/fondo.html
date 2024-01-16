@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color fondo</title>
+</head>
+<body>
+    <button id="boton01">Dame un click</button>
+    <script>
+        'use strict'
+        function manej_boton01(event){
+            var body = document.body
+            body.style.background="red";
+        }
+
+        let b = document.querySelector("#boton01");
+        b.addEventListener("click", manej_boton01);
+    </script>
+</body>
+</html>
