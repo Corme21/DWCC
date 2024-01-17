@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion dinamica de elementos</title>
+</head>
+<body>
+    <button id="boton01">Registrar ahora</button>
+    <div id="div01">---</div>
+    <script>
+        'use strict'
+        function crearParrafo(event){
+            let div01 = document.querySelector("#div01");
+            let fecha = new Date();
+            let parrafo = document.createElement("p");
+            parrafo.textContent = fecha;
+            div01.append(parrafo);
+        }
+
+        let boton = document.querySelector("#boton01");
+        boton01.addEventListener("click", crearParrafo);
+    </script>
+</body>
+</html>
