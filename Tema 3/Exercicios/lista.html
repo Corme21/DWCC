@@ -1,7 +1,7 @@
 <!-- Crear unha paxina que engada nunha lista ordenada, numeros da seguinte forma ao pulsar 
 un boton "Incrementar lista" 
-Teremos un segundo boton que sirva para borrar elementos da lista, cada vez que o pulsemos,
-eliminara o ultimo elemento da lista -->
+Cun segundo boton, ao pulsar click, recorrer todos os parrafos do documento e poñer en verde 
+os parrafos impartes e en vermello os parrafos pares -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,31 +12,36 @@ eliminara o ultimo elemento da lista -->
 </head>
 <body>
     <button id="boton01">Incrementar lista</button>
-    <button id="boton02">Eliminar elementos</button>
-    <div id="lista"></div>
+    <button id="boton02">Cambiar color</button>
+    <ol id="lista"></ol>
 
     <script>
         function aumentar(){
-            let div = document.querySelector("#lista");
-            let parrafo = document.createElement("ol");
-            div.append(parrafo);
+            let ol = document.querySelector("#lista");
 
             let apartado = document.createElement("li");
-            parrafo.append(apartado);
+            lista.append(apartado);
             apartado.textContent ="algo";
         }
 
-        function eliminar(){
-            let div = document.querySelector("#lista");
-            
+        function color(){
+            let lista = document.querySelectorAll("li");
+            let contador = 0;
+            for(let li of lista){
+                contador++;
+                if(contador % 2 == 0){
+                    li.style.color="red";
+                }else{
+                    li.style.color="green";
+                }
+            }
         }
 
         let boton01 = document.querySelector("#boton01");
         boton01.addEventListener("click", aumentar);
 
         let boton02 = document.querySelector("#boton02");
-        boton02.addEventListener("click", eliminar);
-
+        boton02.addEventListener("click", color);
     </script>
 </body>
 </html>
