@@ -1,0 +1,50 @@
+<!-- Crea unha paxina web que conteña duas areas coloreadas de vermello e azul
+cando coloquemos o raton dentro da area vermella, na area azul aparecera un texto de cor branco 
+que poña, rato enriba da primeira area e modifique o cor da primeira area en verde -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas coloreadas</title>
+</head>
+<style>
+    .rojo{background: red; width: 40em; height: 40em;}
+    .azul{background: blue; width: 40em; height: 40em;}
+</style>
+<body>
+    <div id="rojo" class="rojo" onmouseover="color(event)" onmouseout="resetear(event)"></div>
+    <div id="azul" class="azul"></div>
+
+    <script>
+        let azul = document.querySelector("#azul");
+        let rojo = document.querySelector("#rojo");
+
+        function color(event){
+            
+            let parrafo = document.createElement("p");
+            azul.append(parrafo);
+
+            let texto = "Rato enriba da primeira area";
+            parrafo.append(texto);
+            
+            var body = document.body;
+            body.style.color="white";
+
+            rojo.style.background="green";
+
+        }
+
+        function resetear(evente){
+            rojo.style.background="red";
+            azul.textContent="";
+
+        }
+
+        // rojo.addEventListener("mouseover", color(event));
+        // rojo.addEventListener("mouseout", resetear(event));
+        
+    </script>
+</body>
+</html>

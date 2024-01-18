@@ -1,0 +1,42 @@
+<!-- Crear unha paxina que engada nunha lista ordenada, numeros da seguinte forma ao pulsar 
+un boton "Incrementar lista" 
+Teremos un segundo boton que sirva para borrar elementos da lista, cada vez que o pulsemos,
+eliminara o ultimo elemento da lista -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista</title>
+</head>
+<body>
+    <button id="boton01">Incrementar lista</button>
+    <button id="boton02">Eliminar elementos</button>
+    <div id="lista"></div>
+
+    <script>
+        function aumentar(){
+            let div = document.querySelector("#lista");
+            let parrafo = document.createElement("ol");
+            div.append(parrafo);
+
+            let apartado = document.createElement("li");
+            parrafo.append(apartado);
+            apartado.textContent ="algo";
+        }
+
+        function eliminar(){
+            let div = document.querySelector("#lista");
+            
+        }
+
+        let boton01 = document.querySelector("#boton01");
+        boton01.addEventListener("click", aumentar);
+
+        let boton02 = document.querySelector("#boton02");
+        boton02.addEventListener("click", eliminar);
+
+    </script>
+</body>
+</html>

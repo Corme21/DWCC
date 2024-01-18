@@ -9,23 +9,37 @@
     <title>Contador</title>
 </head>
 <body>
-    <button id="boton01">Dame un click</button>
+    <button id="boton01">Subir</button>
+    <button id="boton02">Bajar</button>
+
     <p id="areaContador"></p>
     <script>
         'use strict'
         var pElemento = document.querySelector("#areaContador");
         var click = 0;
-        function contar(event){
+        function contar1(event){
             click ++;
-            console.log(click);
+            pElemento.textContent = click;
             if(click == 10){
                 var body = document.body
                 body.style.background="red";
             }
         }
 
+        function contar2(event){
+                click --;
+                pElemento.textContent = click;
+                if(click == 0){
+                    var body = document.body
+                    body.style.background="green";
+                }
+            }
+
         let b = document.querySelector("#boton01");
-        b.addEventListener("click", contar);
+        b.addEventListener("click", contar1);
+
+        let a = document.querySelector("#boton02");
+        a.addEventListener("click", contar2);
     </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagenes</title>
+</head>
+<style>
+
+</style>
+<body>
+    <div id="area1"><img src="Imagenes/zorro.jfif" alt="Zorro"></div>
+    <div id="area2"><img src="Imagenes/lobo.jfif" alt="Zorro"></div>
+
+    <script>
+        
+        function cambio(event){
+            div1.src = "Imagenes/lobo.jfif";
+            div2.src = "Imagenes/zorro.jfif";
+        }
+        let div1 = document.querySelector("#area1");
+        boton01.addEventListener("mouseover", cambio);
+
+        let div2 = document.querySelector("#area2");
+        
+        function resetear(event){
+
+        }
+
+        // function crearImagen1(event){
+        //     let img = document.createElement("img");
+        //     img.src = "Imagenes/zorro.jfif"
+        //     img.alt = "Zorro";
+        //     area.append(img);
+        // }
+
+        // function crearImagen2(event){
+        //     let img = document.createElement("img");
+        //     img.src = "Imagenes/lobo.jfif"
+        //     img.alt = "Lobo";
+        //     area.append(img);
+        // }
+        
+        // let boton01 = document.querySelector("#imagen1");
+        // boton01.addEventListener("click", crearImagen1);
+
+        // let boton02 = document.querySelector("#imagen2");
+        // boton02.addEventListener("click", crearImagen2);
+
+    </script>
+</body>
+</html>
