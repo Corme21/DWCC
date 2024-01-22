@@ -13,6 +13,8 @@ os parrafos impartes e en vermello os parrafos pares -->
 <body>
     <button id="boton01">Incrementar lista</button>
     <button id="boton02">Cambiar color</button>
+    <button id="boton03">Borrar</button>
+    <button id="boton04">Insertar</button>
     <ol id="lista"></ol>
 
     <script>
@@ -37,11 +39,36 @@ os parrafos impartes e en vermello os parrafos pares -->
             }
         }
 
+        function borrar(){
+            let lista = document.querySelectorAll("ol li"); // Obtener la lista
+
+
+            if (lista.length > 0) {
+                let ultimoElemento = lista[lista.length - 1]; // Obtener el último elemento
+                ultimoElemento.remove();
+            }
+        }
+
+        function insertar(){
+            let texto = prompt("Escribe algo");
+
+            let lista = document.querySelectorAll("li");
+            lista.append(apartado);
+
+
+        }
+
         let boton01 = document.querySelector("#boton01");
         boton01.addEventListener("click", aumentar);
 
         let boton02 = document.querySelector("#boton02");
         boton02.addEventListener("click", color);
+
+        let boton03 = document.querySelector("#boton03");
+        boton03.addEventListener("click", borrar);
+
+        let boton04 = document.querySelector("#boton04");
+        boton04.addEventListener("click", insertar);
     </script>
 </body>
 </html>
