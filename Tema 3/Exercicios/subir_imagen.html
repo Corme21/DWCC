@@ -1,0 +1,51 @@
+<!-- Crea unha taboa que esté composta de seis imaxes que se iran agregando a cada celda; so 
+pode haber seis imaxes. Estas serán subidas solicitando o nome ao usuario.
+Partimos dunha carpeta onde estan o nome das seis imaxes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="boton01">subir imaxen</button><br><br>
+    
+    <table border="1" id="tabla">
+        <tr>
+            <th>Imagenes</th>
+        </tr>
+    </table>
+    <script>
+        'use strict' 
+
+        function subirImaxen(event){
+            let foto = prompt("Nombre de la imagen");
+
+            let tabla = document.querySelector("#tabla");
+            let parrafo = document.createElement("tr");
+            tabla.append(parrafo);
+
+            let celda = document.createElement("td");
+            parrafo.append(celda);
+            
+            let img = document.createElement("img");
+            img.src = "Imagenes/" + String(foto)+ ".jpg";
+            img.alt = String(foto);
+            celda.append(img);
+
+            let td = document.querySelectorAll("td");
+            let contador = 0;
+            if(contador != 6){
+                contador++;
+            }else{
+                
+            }
+        }
+
+        let boton = document.querySelector("#boton01");
+        boton01.addEventListener("click", subirImaxen);
+    </script>
+</body>
+</html>
