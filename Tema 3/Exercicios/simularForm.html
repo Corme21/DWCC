@@ -1,0 +1,80 @@
+<!-- Crear o formulario existente que rexistre ao paciente si:
+Está correcto o dni.
+Está presente o primeiro apelido.
+Hay data de nacemento.
+En caso correcto, imprimir nun div os datos introducidos.
+No caso de que non esté correcto: avisar de que elemento do formulario non está
+correcto.
+MELLORA:
+Deshabilitar os campos ata que se vaian introducindo correctamente os valores
+de cada un deles. De igual forma, se todo está correcto, imprimir nun div os
+valores do formulario.   -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulacion de Formulario</title>
+</head>
+<body>
+    <form id=formulario01>
+        <label for="dni">DNI</label>
+        <input type="text" name="dni" id="dni"><br><br>
+        <label for="apellido">Primeiro Apellido</label>
+        <input type="text" name="apellido" id="apellido"><br><br>
+        <label for="fecha">Data de nacemento</label>
+        <input type="date" name="fecha" id="fecha"><br><br>
+        <div id="validacion1"></div><br>
+        <div id="validacion2"></div><br>
+        <div id="validacion3"></div>
+    </form>
+
+    <script>
+        function validar1(event){
+            let expresion = /^[0-9]{8}[A-Z]{1}$/i;
+
+            let display = document.querySelector("#validacion1");
+            let dni = document.querySelector("#dni").value;
+            
+            if (expresion.test(dni) == true) {
+                display.textContent = dni;
+            } else {
+                display.textContent = "DNI incorrecto";
+            }
+        }
+
+        function validar2(event){
+
+            let display = document.querySelector("#validacion2");
+            let apellido = document.querySelector("#apellido").value;
+            
+            if (apellido == " ") {
+                display.textContent = "Apellido incorrecto";
+            } else {
+                display.textContent = apellido;
+            }
+        }
+
+        function validar3(event){
+            let display = document.querySelector("#validacion1");
+            let fecha = document.querySelector("#fecha").value;
+            
+            if (asfgas) {
+                display.textContent = fecha;
+            } else {
+                display.textContent = "Fecha incorrecta";
+            }
+        }
+        
+        let campo1 = document.querySelector("#dni");
+        campo1.addEventListener("change", validar1);
+
+        let campo2 = document.querySelector("#apellido");
+        campo2.addEventListener("change", validar2);
+
+        let campo3 = document.querySelector("#fecha");
+        campo3.addEventListener("change", validar3);
+    </script>
+</body>
+</html>
