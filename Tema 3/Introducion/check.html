@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check</title>
+</head>
+<body>
+    <form id=formulario01 action="/action_page.html">
+        <input type="radio" name="figura" value="sota">Sota
+        <input type="radio" name="figura" value="caballo">Caballo
+        <input type="radio" name="figura" value="rey">Rey
+    </form>
+    <script>
+        'use strict'
+        function manej01(event) {
+            let input = document.querySelector("input[name=figura]:checked");
+            console.log(input.value);
+        };
+        
+        let formulario01 = document.querySelector("#formulario01");
+        formulario01.addEventListener("change", manej01);
+    </script>
+</body>
+</html>

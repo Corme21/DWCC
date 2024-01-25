@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraseña</title>
+</head>
+<body>
+    <form action="/action_page.html" id=formulario01>
+        <label for="usuario">Usuario</label>
+        <input type="text" name="usuario" id="contrasenia">
+        <div id="validacion"></div>
+    </form>
+    <script>
+        let contrasenia_minima = 8;
+        
+        function manej01(event) {
+            let display = document.querySelector("#validacion");
+            let contrasenia = document.querySelector("#contrasenia").value;
+            if (contrasenia.length >= contrasenia_minima) {
+                display.textContent = "Contraseña aceptable";
+            } else {
+                display.textContent = "Contraseña muy corta";
+            }
+        };
+
+        let campo_contra = document.querySelector("#contrasenia");
+        campo_contra.addEventListener("change", manej01);
+    </script>
+</body>
+</html>
