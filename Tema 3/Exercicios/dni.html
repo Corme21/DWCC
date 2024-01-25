@@ -1,0 +1,43 @@
+
+<!-- Crea unha paxina que reciba un texto que debe ser concordante cunha expresion regular 
+para un DNI. Se o DNI introducido foi correcto, unha vez se pulsou validar, habera un 
+panel abaixo (rexion) que se poña de azul e poña "DNI correcto", no caso de que sea 
+incorrecto a rexion poñerase en vermello co texto visible "DNI incorrecto" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNI</title>
+</head>
+<body>
+    <form action="dni.html" id=formulario01>
+        <label for="dni">DNI</label>
+        <input type="text" name="dni" id="dni">
+        <input type="submit" name="Validar" id="validar">
+    </form>
+    <div id="validacion"></div>
+
+    <script>
+
+        function validar(event){
+            let expresion = /^[0-9]{8}[A-Z]{1}$/i;
+            let dni = document.querySelector("#dni");
+            
+            if(expresion.test(dni.value) == true){
+                let div = document.querySelector("#validacion");
+
+                div.textContent = "DNI correcto";
+            }else{
+                let div = document.querySelector("#validacion");
+
+                div.textContent = "DNI correcto";
+            }
+        }
+        
+        let campo_contra = document.querySelector("#validar");
+        campo_contra.addEventListener("change", validar);
+    </script>
+</body>
+</html>
