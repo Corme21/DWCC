@@ -22,9 +22,9 @@ valores do formulario.   -->
         <label for="dni">DNI</label>
         <input type="text" name="dni" id="dni"><br><br>
         <label for="apellido">Primeiro Apellido</label>
-        <input type="text" name="apellido" id="apellido"><br><br>
+        <input type="text" name="apellido" id="apellido" disabled><br><br>
         <label for="fecha">Data de nacemento</label>
-        <input type="date" name="fecha" id="fecha"><br><br>
+        <input type="date" name="fecha" id="fecha" disabled><br><br>
         <div id="validacion1"></div><br>
         <div id="validacion2"></div><br>
         <div id="validacion3"></div>
@@ -32,27 +32,30 @@ valores do formulario.   -->
 
     <script>
         function validar1(event){
-            let expresion = /^[0-9]{8}[A-Z]{1}$/i;
+            let expresion = /^[0-9]{8}[A-Z]{1}$/;
 
             let display = document.querySelector("#validacion1");
             let dni = document.querySelector("#dni").value;
             
             if (expresion.test(dni) == true) {
                 display.textContent = dni;
+                document.querySelector("#apellido").disabled = false;
             } else {
                 display.textContent = "DNI incorrecto";
+                document.querySelector("#apellido").disabled = true;
             }
         }
 
         function validar2(event){
-
             let display = document.querySelector("#validacion2");
             let apellido = document.querySelector("#apellido").value;
             
             if (apellido == " ") {
                 display.textContent = "Apellido incorrecto";
+                document.querySelector("#fecha").disabled = true;
             } else {
                 display.textContent = apellido;
+                document.querySelector("#fecha").disabled = false;
             }
         }
 
