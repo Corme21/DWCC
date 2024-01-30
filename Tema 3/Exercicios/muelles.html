@@ -1,0 +1,31 @@
+<!-- Con 6 imagenes, que aparezca el "alt" de la imagen en la que se hizo click. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muelles</title>
+</head>
+<body>
+    <img src="Imagenes/Muelles/Coruña.jpg" alt="Coruña" id="Coruña" size="300" width="500">
+    <img src="Imagenes/Muelles/Corme.jpg" alt="Corme" id="Corme" size="300" width="500">
+    <img src="Imagenes/Muelles/Laxe.jpg" alt="Laxe" id="Laxe" size="300" width="500">
+    <img src="Imagenes/Muelles/Malpica.jpg" alt="Malpica" id="Malpica" size="300" width="500">
+    <img src="Imagenes/Muelles/Ferrol.jpg" alt="Ferrol" id="Ferrol" size="300" width="500">
+    <img src="Imagenes/Muelles/Vigo.jpg" alt="Vigo" id="Vigo" size="300" width="500">
+
+    <div id="alternativa"></div>
+
+    <script>
+        function identificar(event){
+            let img = event.target.id;
+
+            
+
+            let alter = document.querySelector("#alternativa");
+            img.addEventListener("click", identificar)
+            }
+    </script>
+</body>
+</html>
