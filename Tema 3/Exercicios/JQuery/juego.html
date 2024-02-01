@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <title>Juego</title>
+    <style>
+        #feedback { font-size: 1.4em; }
+        #selectable .ui-selecting { background: #FECA40; }
+        #selectable .ui-selected { background: #F39814; color: white; }
+        #selectable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+        #selectable li { margin: 3px; padding: 0.4em; font-size: 1.4em; height: 18px; width: 150px;}
+        #droppable1 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+        #droppable2 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+        #droppable3 { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $( function() {
+        $( "#selectable" ).selectable();
+        $( "#draggable1" ).draggable();
+        $( "#draggable2" ).draggable();
+        $( "#draggable3" ).draggable();
+        $( "#draggable4" ).draggable();
+        $( "#draggable5" ).draggable();
+        $( "#droppable1" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                .addClass( "ui-state-highlight" )
+                    .find( "p" )
+                        .html( "Dropped!" );
+                }
+            });
+        $( "#droppable2" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                .addClass( "ui-state-highlight" )
+                    .find( "p" )
+                        .html( "Dropped!" );
+                }
+            });
+        $( "#droppable3" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                .addClass( "ui-state-highlight" )
+                    .find( "p" )
+                        .html( "Dropped!" );
+                }
+            });
+        } );
+  </script>
+</head>
+<body>
+    <ol id="selectable">
+        <li id="draggable1" class="ui-widget-content">Esdrújula</li>
+        <li id="draggable2" class="ui-widget-content">Identificación</li>
+        <li id="draggable3" class="ui-widget-content">Difícil</li>
+        <li id="draggable4" class="ui-widget-content">Funciona</li>
+        <li id="draggable5" class="ui-widget-content">Roto</li>
+    </ol>
+
+    <div id="droppable1" class="ui-widget-header">
+        <p>Agudas</p>
+    </div>
+    <div id="droppable2" class="ui-widget-header">
+        <p>Llanas</p>
+    </div>
+    <div id="droppable3" class="ui-widget-header">
+        <p>Esdrújulas</p>
+    </div>
+    <div class = "respuesta"></div>
+</body>
+</html>

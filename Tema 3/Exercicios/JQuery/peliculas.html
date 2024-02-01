@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <title>Lista de peliculas</title>
+</head>
+<style>
+    #droppable { width: 35em; height: 45em; padding: 0.5em; float: left; margin: 10px; }
+    #desplazar1 { width: 150px; height: 150px; padding: 0.5em; }
+    #desplazar2 { width: 150px; height: 150px; padding: 0.5em; }
+    #desplazar3 { width: 150px; height: 150px; padding: 0.5em; }
+    #desplazar4 { width: 150px; height: 150px; padding: 0.5em; }
+    #desplazar5 { width: 150px; height: 150px; padding: 0.5em; }
+    #desplazar6 { width: 150px; height: 150px; padding: 0.5em; }
+    #desplazar7 { width: 150px; height: 150px; padding: 0.5em; }
+    #lista .ui-selecting { background: #FECA40; }
+    #lista .ui-selected { background: #F39814; color: white; }
+    #lista { list-style-type: none; margin: 0; padding: 0; width: 60%; }
+    #lista li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+    #lista li span { position: absolute; margin-left: -1.3em; }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+ <!-- Cambiar -->
+<!-- <script>
+    $( function() {
+      $( "#lista" ).sortable();
+    } );
+</script> -->
+<!-- Seleccionar -->
+<script>
+    $( function() {
+      $( "#lista" ).selectable();
+    } );
+</script>
+
+<!-- Arastrar -->
+<script>
+    $( function() {
+      $( "#desplazar1" ).draggable();
+      $( "#desplazar2" ).draggable();
+      $( "#desplazar3" ).draggable();
+      $( "#desplazar4" ).draggable();
+      $( "#desplazar5" ).draggable();
+      $( "#desplazar6" ).draggable();
+      $( "#desplazar7" ).draggable();
+      $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+        }
+    })
+    } );
+</script>
+
+<!-- Extender -->
+<script>
+    $( function() {
+      $( "#resizable1" ).resizable();
+      $( "#resizable2" ).resizable();
+      $( "#resizable3" ).resizable();
+      $( "#resizable4" ).resizable();
+      $( "#resizable5" ).resizable();
+      $( "#resizable6" ).resizable();
+      $( "#resizable7" ).resizable();
+
+    } );
+    </script>
+<body>
+    <ul id="lista">
+        <li class="ui-widget-content" class="ui-state-default" class="ui-selecting" class="ui-selected">Avatar</li>
+        <li class="ui-widget-content" class="ui-state-default" class="ui-selecting" class="ui-selected">El lobo de Wall Street</li>
+        <li class="ui-widget-content" class="ui-state-default" class="ui-selecting" class="ui-selected">Interstellar</li>
+        <li class="ui-widget-content" class="ui-state-default" class="ui-selecting" class="ui-selected">Jurasicc World</li>
+        <li class="ui-widget-content" class="ui-state-default" class="ui-selecting" class="ui-selected">Malditos Bastardos</li>
+        <li class="ui-widget-content" class="ui-state-default" class="ui-selecting" class="ui-selected">Top Gun</li>
+      </ul>
+      <div id="desplazar1" class="ui-widget-content">
+        <img id="resizable1" src="../Imagenes/Pelis/avatar.jpg" alt="avatar" height="500" width="300">
+    </div>
+    <div id="desplazar2" class="ui-widget-content">
+        <img id="resizable2" src="../Imagenes/Pelis/lobo.jpg" alt="lobo" height="500" width="300">
+    </div>
+    <div id="desplazar3" class="ui-widget-content">    
+        <img id="resizable3" src="../Imagenes/Pelis/interstellar.jpg" alt="interstellar" height="500" width="300">
+    </div>
+    <div id="desplazar4" class="ui-widget-content">    
+        <img id="resizable4" src="../Imagenes/Pelis/jurasicc.jpg" alt="jurasicc" height="500" width="300">
+    </div>
+    <div id="desplazar6" class="ui-widget-content">    
+        <img id="resizable6" src="../Imagenes/Pelis/bastardos.jpg" alt="malditos bastardos" height="500" width="300">
+    </div>
+    <div id="desplazar7" class="ui-widget-content">    
+        <img id="resizable7" src="../Imagenes/Pelis/gun.jpg" alt="gun" height="500" width="300">
+    </div>
+
+    <div id="droppable" class="ui-widget-header">
+        <p>Drop here</p>
+    </div>
+</body>
+</html>
