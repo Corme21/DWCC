@@ -28,6 +28,8 @@
         $( "#draggable4" ).draggable();
         $( "#draggable5" ).draggable();
         $( "#droppable1" ).droppable({
+            accept: "#draggable2",
+            accept: "#draggable3",
             drop: function( event, ui ) {
                 $( this )
                 .addClass( "ui-state-highlight" )
@@ -36,6 +38,8 @@
                 }
             });
         $( "#droppable2" ).droppable({
+            accept: "#draggable3",
+            accept: "#draggable4",
             drop: function( event, ui ) {
                 $( this )
                 .addClass( "ui-state-highlight" )
@@ -44,6 +48,7 @@
                 }
             });
         $( "#droppable3" ).droppable({
+            accept: "#draggable1",
             drop: function( event, ui ) {
                 $( this )
                 .addClass( "ui-state-highlight" )
