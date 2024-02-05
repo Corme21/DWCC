@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-    <link rel="stylesheet" href="/resources/demos/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://jquery.com//resources/demos/style.css">
     <title>Juego</title>
     <style>
         #feedback { font-size: 1.4em; }
@@ -29,7 +29,7 @@
         $( "#draggable5" ).draggable();
         $( "#droppable1" ).droppable({
             accept: "#draggable2",
-            accept: "#draggable3",
+            accept: "#draggable5",
             drop: function( event, ui ) {
                 $( this )
                 .addClass( "ui-state-highlight" )
@@ -65,7 +65,7 @@
         <li id="draggable2" class="ui-widget-content">Identificación</li>
         <li id="draggable3" class="ui-widget-content">Difícil</li>
         <li id="draggable4" class="ui-widget-content">Funciona</li>
-        <li id="draggable5" class="ui-widget-content">Roto</li>
+        <li id="draggable5" class="ui-widget-content">Jugó</li>
     </ol>
 
     <div id="droppable1" class="ui-widget-header">
