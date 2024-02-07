@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- agregando libreria jQuery -->
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
+    <title>Tabla</title>
+</head>
+<body>
+    <table id="tabla" border="1">
+        <tr>
+            <th>Hola</th>
+            <th>Adios</th>
+        </tr>
+        <tr>
+            <td>Algo</td>
+            <td>Otro</td>
+        </tr>
+    </table>
+    
+    <p id="parrafo">Esto es un parrafo</p>
+
+    <h2>Esta imagen de un <p>zorro</p> me gusta</h2>
+
+    <img src="/Tema 3/Exercicios/Imagenes/zorro.jpg" alt="zorro">
+
+    <script>
+        $("#tabla th").css('background', '#ddd');
+        $("#parrafo").css('color', 'green');
+        $("img").css('border', '2px solid red');
+        $("h2 p").css('color', 'orange');
+        $("img").click(function(event){
+            $("img").css({'height':'50%','width':'50%'});
+        });
+    </script>
+</body>
+</html>
