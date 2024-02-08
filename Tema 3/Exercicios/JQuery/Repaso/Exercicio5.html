@@ -1,0 +1,22 @@
+<!-- Executa unha funcion cando se faga click nun elemento que amose a data actual do sistema -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Cambio</title>
+</head>
+<body>
+    <input id="boton" type="button" name="mostrar" value="Mostrar data">
+
+    <script>
+        $("#boton").click(function(){
+            $('<p>' + Date() +'</p>').insertBefore('#boton');
+        });
+    </script>
+</body>
+</html>

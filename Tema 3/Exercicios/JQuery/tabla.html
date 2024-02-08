@@ -10,6 +10,9 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script> -->
     <title>Tabla</title>
 </head>
+<style>
+    #box{width: 100px; height: 100px; background: orange; display: block;border-radius: 5px;}
+</style>
 <body>
     <table id="tabla" border="1">
         <tr>
@@ -24,6 +27,8 @@
     
     <p id="parrafo">Esto es un parrafo</p>
 
+    <div id='box'></div>
+
     <h2>Esta imagen de un <p>zorro</p> me gusta</h2>
 
     <img src="/Tema 3/Exercicios/Imagenes/zorro.jpg" alt="zorro">
@@ -33,9 +38,41 @@
         $("#parrafo").css('color', 'green');
         $("img").css('border', '2px solid red');
         $("h2 p").css('color', 'orange');
-        $("img").click(function(event){
-            $("img").css({'height':'50%','width':'50%'});
-        });
+        // $("img").click(function(event){
+        //     $("img").css({'height':'50%','width':'50%'});
+        // });
+        // Animado
+        $("img").hover(
+            function (){
+                $(this).animate({ 'width': "400px", "height" : "400px","opacity":"0.5"});
+            },
+            function (){
+                $(this).animate({ 'width': "209px", "height" : "241px","opacity":"1"});
+            }
+        );
+        $("#box").hover(
+            function (){
+                $(this).animate({ 'width': "300px", "height" : "300px"});
+            },
+            function (){
+                $(this).animate({ 'width': "100px", "height" : "100px"});
+            }
+        );
+        //Antes
+        $('<p>Test1</p>').insertBefore('#box');
+        $('#box').before('<p>Test2</p>');
+        //Despues
+        $('<p>Test3</p>').insertAfter('#box');
+        $('#box').after('<p>Test4</p>');
+        // append
+        $('#box').append('<p>Test5</p>');
+        //appendto
+        $('<p>Test6</p>').appendTo('#box');
+        // fadeIn
+        $('#box').fadeIn(slow);
+        // show & hide
+        $('#box').show();
+        $('#box').hide();
     </script>
 </body>
 </html>

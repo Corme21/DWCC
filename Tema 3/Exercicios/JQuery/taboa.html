@@ -1,0 +1,40 @@
+<!-- Partimos dunha taboa co encabezado TABOA JQUERY e ao pulsar o boton insertar, insertarase
+unha fila da taboa. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Taboa JQuery</title>
+</head>
+<body>
+    <input id="boton" type="button" name="insertar" value="insertar"><br><br>
+
+    <table id="tabla" border="1">
+        <tr>
+            <th>Taboa JQuery</th>
+        </tr>
+    </table>
+        
+    <script>
+        $("#boton").click(function(){
+            $("#tabla").append("<tr><td>fila</td></tr>s")
+        });
+
+        // function insertar(){
+        //     let div = document.querySelector("#tabla");
+        //     let tr = document.createElement("tr")
+        //     $("#tabla").append(tr);
+
+        //     $(tr).append("<td>fila</td>");
+        // };
+
+        // let boton = document.querySelector("#boton");
+        // boton.addEventListener("click", insertar);
+    </script>
+</body>
+</html>
