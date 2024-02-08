@@ -1,0 +1,37 @@
+<!-- Partimos de duas imaxes con unha dimension de 100x100.
+Ao pasar o rato por riba da primeira dobrase con animación a sua dimension.
+A pasar o rato por riba da segunda, disminue a metade a dimension -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Imagenes</title>
+</head>
+<body>
+    <img id="img1" src="../../Imagenes/zorro.jpg" alt="zorro1" height="100" width="100">
+
+    <img id="img2" src="../../Imagenes/zorro.jpg" alt="zorro2" height="100" width="100">
+
+    <script>
+        let contador1 = 0;
+        let contador2 = 0;
+
+        while(contador1 != 50){
+            $("#img1").animate({'width': "200px", "height" : "200px"}); 
+            $("#img1").animate({'width': "100px", "height" : "100px"});
+            contador1++;
+        }
+        
+        while(contador2 != 50){
+            $("#img2").animate({'width': "50px", "height" : "50px"});
+            $("#img2").animate({'width': "100px", "height" : "100px"});
+            contador2++;
+        }
+    </script>
+</body>
+</html>

@@ -14,11 +14,20 @@
     div{background: red; display: block; height: 100px; width: 100px;}
 </style>
 <body>
-    <div id="color"></div>
+    <div id="color"></div><br>
+
+    <input id="boton1" type="button" value="mostrar">
+
+    <input id="boton2" type="button" value="Ocultar">
 
     <script>
-        $("#color").click(function(){
-                $("#color").css({"opacity":"0"});
+        $("#boton1").click(function(){
+                $('#color').show();
+        });
+
+        $("#boton2").click(function(){
+                // $("#color").css({"opacity":"0"});
+                $('#color').hide();
         });
     </script>
 </body>
