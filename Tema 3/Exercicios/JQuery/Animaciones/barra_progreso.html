@@ -1,0 +1,32 @@
+<!-- alterna entre mostrar e ocultar o elemento. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Animate</title>
+</head>
+<style>
+    div{border: 10px solid red; background-color: red; height: 2em; width: 0%;}
+    .otro{border: 10px solid yellow; background-color: yellow; height: 2em; width: 0%;}
+</style>
+<body>
+    <div id="progreso1"></div>
+    <div class="otro" id="progreso2"></div>
+    <div id="progreso3"></div><br>
+
+    <input type="button" value="Iniciar" id="iniciar">
+
+    <script>
+        $("#iniciar").click(function(){
+            $("#progreso1").animate({'width':'100%'})
+            $("#progreso2").animate({'width':'100%'})
+            $("#progreso3").animate({'width':'100%'})
+        });
+    </script>
+</body>
+</html>
