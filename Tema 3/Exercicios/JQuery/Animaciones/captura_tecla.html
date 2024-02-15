@@ -9,14 +9,23 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <title>Captura la tecla</title>
 </head>
+<style>
+    div{background-color: skyblue;}
+</style>
 <body>
-    <div id="texto"></div>
+    <div id="captura"></div>
 
     <script>
-        document.addEventListener("keydown", function(event){
-            let div = document.querySelector("#texto")
+        $("body").keydown(function(event){
+            var mensage = 'El evento keydown() fue llamado para la tecla ' + event.which;
 
-            div.textContent = `Tecla: ${event.key}  ASCII: ${event.keyCode}`
+            console.log(mensage);
+            
+            if(event.which == 65){
+                event.preventDefault();
+            }else{
+                $("#captura").text(event.key);
+            }
         });
     </script>
 </body>
