@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrir nuevas ventanas</title>
+</head>
+<body>
+    <script>
+        let contador = 0;
+
+        let intervalo = setInterval(function(){
+            let nuevaVentana = window.open('https://www.google.es','_blank');
+            contador++;
+
+            if(contador == 10){
+            clearInterval(intervalo);
+            }
+        }, 1000);
+
+        // setInterval(function(){
+        //     let cerrarVentana = window.close('https://www.google.es','_blank');
+        // }, 7000);
+        
+    </script>
+</body>
+</html>
