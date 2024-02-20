@@ -1,0 +1,37 @@
+<!-- Agora fai o mesmo pero a expresión regular será para validar contrasinais que deben ter 8
+caracteres, unha letra maiúscula, unha letra minúscula, un número e polo menos un
+carácter especial destes. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <input type="text" id="texto" name="texto">
+    <div id="imagen">
+        <img src="../../Imagenes/boton.jpg" id="boton" alt="boton" height="200" width="200">
+    </div><br>
+
+    <div id="respuesta"></div>
+
+    <script>
+        $("#boton").click(function(event){
+            // let contraseña =/[A-Za-z0-9.]{8,}/;
+
+            let texto = document.querySelector("#texto").value;
+
+            if(contraseña.test(texto) == true){
+                $("#respuesta").text("Contraseña valida");
+            }else{
+                $("#respuesta").text("Contraseña invalida");
+            }
+        });
+    </script>
+</body>
+</html>

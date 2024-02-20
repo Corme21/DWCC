@@ -1,0 +1,57 @@
+<!-- Dada unha caixa de texto (input) onde se pode escribir calquera texto, validar a entrada
+do mesmo como un correo electrónico válido. Faino tendo un botón que será un div que
+ao pulsar sobre el nos indique se o que hai na caixa de correo é correcto ou non. Debe
+indicalo noutro div -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <input type="text" id="texto" name="texto">
+    <div id="imagen">
+        <img src="../../Imagenes/boton.jpg" id="boton" alt="boton" height="200" width="200">
+    </div><br>
+
+    <div id="respuesta"></div>
+
+    <script>
+        $("#boton").click(function(event){
+            let email = /^[A-Za-z0-9.]+@[a-z0-9.]+\.[a-z]{2,4}$/i;
+
+            console.log("1");
+
+            let texto = document.querySelector("#texto").value;
+            console.log("2");
+            
+            if(email.test(texto) == true){
+                $("#respuesta").text("El correo es correcto");
+                // console.log("3");
+
+                // let div = document.querySelector("#respuesta");
+                // let parrafo = document.createElement("p");
+
+                // div.append(parrafo);
+                // console.log("5");
+                // parrafo.textContent("El correo es correcto");
+            }else{
+                $("#respuesta").text("El correo no es correcto");
+                // console.log("4");
+
+                // let div = document.querySelector("#respuesta");
+                // let parrafo = document.createElement("p");
+
+                // div.append(parrafo);
+                // console.log("6");
+                // parrafo.textContent("El correo no es correcto");
+            }
+        });
+    </script>
+</body>
+</html>
