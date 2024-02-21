@@ -1,0 +1,37 @@
+<!-- Crea unha páxina que reciba unha data nun input e indique canto tempo falta para
+cambiar de século dende esa data.
+Exemplo: 1930 2000-1930
+        2000 2100-2200 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 4</title>
+</head>
+<style>
+    div{display: none;}
+</style>
+<body>
+    <input type="text" id="fecha">
+
+    <input type="button" id="calcular" value="Calcular">
+
+    <div id="tiempo"></div>
+
+    <script>
+        $("#calcular").click(function(){
+            let fecha = document.querySelector("#fecha").value;
+
+            $("#tiempo").text("Aun queda mucho");
+            $("#tiempo").css({"display": "block"});
+        });
+    </script>
+</body>
+</html>
