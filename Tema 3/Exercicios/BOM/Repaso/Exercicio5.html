@@ -1,0 +1,36 @@
+<!-- Crea unha páxina con tres botóns que: un abra unha nova ventá, outro redireccione a
+unha páxina web solicitada por input e outro recargue a páxina actual. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <input type="button" id="abrir" value="Abrir ventana"><br>
+    <p><input type="text" id="pagina"> <input type="button" id="viajar" value="Ir a la pagina"></p>
+    <input type="button" id="recarga" value="Recargar">
+
+    <script>
+        $("#abrir").click(function(){
+            window.open('https://www.google.es','_blank');
+        });
+
+        $("#viajar").click(function(){
+            let enlace = document.querySelector("#pagina").value;
+            
+            window.open(enlace);
+        });
+
+        $("#recerga").click(function(){
+            window.location.reload();
+        });
+    </script>
+</body>
+</html>

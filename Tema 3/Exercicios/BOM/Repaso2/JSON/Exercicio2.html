@@ -1,0 +1,61 @@
+<!-- Crea un array de empresas con 2 empresas (Referencia, exercicio plantuka). Imprime os 
+datos de cada empresa con un div distinto con efecto div. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 2</title>
+</head>
+<style>
+    div{display: none;}
+</style>
+<body>
+    <div id="empresa"></div>
+
+    <script>
+
+        var empresa= {"Nome":"Alonso S.L.", "CIF":"G1513648", "Direccion":"Rúa Areal, 24. 15150. A Coruña",
+        "Teléfono":"9817385444"};
+
+        var empresaDT = JSON.parse(JSON.stringify(empresa));
+
+        empresa.guardarDatos= function(Nome, CIF, Direccion, Telefono){
+            this.Nome= Nome;
+            this.CIF= CIF;
+            this.Direccion= Direccion;
+            this.Telefono= Telefono;
+        }
+
+        empresa.imprimirDatos= function(){
+            document.write(this.Nome + "<br>");
+            document.write(this.CIF + "<br>");
+            document.write(this.Direccion + "<br>");
+            document.write(this.Telefono + "<br>");
+            document.write("<br>");
+            $("#datos").show("slow").css({"display": "block"});
+        }
+
+        var empresas = [];
+
+        for(let i = 0; i < 2; i++){
+            var nuevaEmpresa = Object.create(empresa);
+            nome = prompt("introduce o nome da empresa");
+            CIF = prompt("introduce o CIF");
+            Direccion = prompt("Introduce a direccion");
+            Telefono = prompt("Introduce o telefono");
+            nuevaEmpresa.guardarDatos(nome, CIF, Direccion, Telefono);
+            empresas.push(nuevaEmpresa);
+        }
+
+        for (var i = 0; i < 2; i++) {
+            empresas[i].imprimirDatos();
+        }
+    </script>
+</body>
+</html>

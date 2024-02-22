@@ -1,0 +1,40 @@
+<!--  Engade unha función ao obxecto Array que obteña todos os números impares do 0 ao 100. 
+Carga todos os números impartes nun div que será amosado unha vez pasen cinco segundos. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 1</title>
+</head>
+<style>
+    div{display: none;}
+</style>
+<body>
+    <div id="numeros"></div>
+
+    <script>
+        let array = [];
+
+        Array.prototype.obterImpares = function() {
+            for(let i = 0; i != 100; i++){
+                if(i % 2 != 0){
+                   array.push(i);
+                } 
+            }
+
+            let tiempo = setTimeout(function(){
+                $("#numeros").text(array);
+                $("#numeros").fadeIn().css({"display":"block"});
+            }, 5000);
+        }
+
+        array.obterImpares(array);
+    </script>
+</body>
+</html>

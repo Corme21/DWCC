@@ -1,0 +1,36 @@
+<!-- Engade unha función ao obxecto String que devolva unha cadea ao revés de como se lle 
+pasou. A cadea debe ser introducida mediante un cadro te texto input. Executarase a acción 
+unha vez se pulse sobre un botón (imaxe). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <input type="text" id="cadena"><br>
+    <img src="../../../Imagenes/boton.jpg" alt="boton" id="boton" height="200" width="200">
+
+    <script>
+        $("#boton").click(function(){
+            let cadea = document.querySelector("#cadena").value;
+
+            let array = [];
+
+            Array.prototype.voltear = function() {
+                for(let i = 0; i < cadea.length; i++){
+                    array.push(cadea[i]);
+                }
+                
+            }
+
+            array.voltear(array, cadea);
+        });
+    </script>
+</body>
+</html>
