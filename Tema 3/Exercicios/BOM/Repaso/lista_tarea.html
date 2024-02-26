@@ -1,0 +1,54 @@
+<!-- Crea unha web que cree unha lista de tarefas.
+O boton + engade tarefas que podemos incluir nun input.
+Unha vez engadidas, pasan a unha lista <ul>. Cada tarefa tera o boton "Quitar", que borrara a 
+tarefa da lista.
+No borrado, usar un efecto fadeOut ou animate. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Lista de tareas</title>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+
+    <input id="tarea" type="text"> <input id="añadir" type="button" value="+">
+
+    <ul id="lista"></ul>
+
+    <script>
+        $("#añadir").click(function(event){
+            let tarea = document.querySelector("#tarea").value
+            
+            let boton = document.createElement("input");
+            boton.id = "quitar";
+            boton.type = "button";
+            boton.value ="Quitar";
+
+            let div = document.createElement("div");
+            boton.id = "div";
+            
+            div.append(boton);
+
+            let lista = document.querySelector("#lista")
+
+            let il = document.createElement("il");
+
+            il.append(tarea);
+
+            lista.append(il);
+            
+        });
+
+        $("#quitar").click(function(event){
+
+        });
+    </script>
+</body>
+</html>

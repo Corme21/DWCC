@@ -1,0 +1,32 @@
+<!-- Crea unha paxina web que teña un texto que indique que ao pulsar Alt+F12 podemos colocar
+unha imaxen de fondo. O texto ten que estar centrado na pantalla horizontal e verticalmente.
+Ao iniciar a pantalla sera negra co texto indicado e cando o usuario non pulse tecla, a imaxe
+se amose -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Imagen de fondo</title>
+</head>
+<style>
+    body{background: black;}
+    p{color: white; text-align: center; padding-top: 50%;}
+</style>
+<body>
+    <p><strong>Pulsa Alt+F12 para cambiar el fondo</strong></p>
+
+    <script>
+        document.addEventListener("keyPress", function(event){
+            if(event.altKey && event.key == "F12"){
+                $("body").css({'background.':'url(../../Imagenes/caballo.jpg)', 'background-repeat': 'no-repeat', 'background-size': '100%'});
+            }
+        });
+    </script>
+</body>
+</html>
