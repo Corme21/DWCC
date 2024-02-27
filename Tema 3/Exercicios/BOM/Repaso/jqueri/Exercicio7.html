@@ -1,0 +1,24 @@
+<!-- Colle unha imaxe calquera que aparece aliñada á esquerda. Ao pasar 5 segundos da carga 
+da páxina debe aparecer no extremo dereito. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 7</title>
+</head>
+<body>
+    <img id="imagen" src="../../../Imagenes/zorro.jpg">
+
+    <script>
+        setTimeout(function(event){
+            $("#imagen").css({"float":"right"});
+        }, 5000);
+    </script>
+</body>
+</html>

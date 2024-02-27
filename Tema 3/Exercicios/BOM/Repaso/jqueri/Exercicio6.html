@@ -1,0 +1,45 @@
+<!-- Continua co exercicio anterior. Agora os parágrafos deben desaparecer lentamente, 
+de forma que vai perder a opacidade. Ó volver pulsar deberán gañar opacidade á mesma 
+velocidade. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <p id="parrafo1">Este parrafo va a desaparecer</p>
+    <p id="parrafo2">Este parrafo tambien va a desaparecer</p>
+    <p id="parrafo3">Este parrafo va a desaparecer</p>
+    <p id="parrafo4">Este parrafo tambien va a desaparecer</p>
+    <input id="desaparicion" type="button" value="Desaparecer">
+
+    <script>
+        
+        let contador = true;
+
+        $("#desaparicion").click(function(){
+
+            if(contador){
+                $("#parrafo1").css({"opacity" : "0"}).animate("slow")
+                $("#parrafo2").css({"opacity" : "0"}).animate("slow");
+                $("#parrafo3").css({"opacity" : "0"}).animate("slow");
+                $("#parrafo4").css({"opacity" : "0"}).animate("slow");
+                contador = false;
+            }else{
+                $("#parrafo1").css({"opacity" : "1"}).animate("slow");
+                $("#parrafo2").css({"opacity" : "1"}).animate("slow");
+                $("#parrafo3").css({"opacity" : "1"}).animate("slow");
+                $("#parrafo4").css({"opacity" : "1"}).animate("slow");
+                contador = true;
+            }
+        });
+    </script>
+</body>
+</html>

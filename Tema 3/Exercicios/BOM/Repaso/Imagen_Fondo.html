@@ -18,15 +18,31 @@ se amose -->
     body{background: black;}
     p{color: white; text-align: center; padding-top: 50%;}
 </style>
-<body>
+<!-- <body>
     <p><strong>Pulsa Alt+F12 para cambiar el fondo</strong></p>
 
     <script>
-        document.addEventListener("keyPress", function(event){
-            if(event.altKey && event.key == "F12"){
-                $("body").css({'background.':'url(../../Imagenes/caballo.jpg)', 'background-repeat': 'no-repeat', 'background-size': '100%'});
+        document.addEventListener("keydown", function(event){
+            let tecla = event.key
+            if(tecla == "F12" && event.altKey){
+                document.querySelector("#wrap").style.backgroundImage = "url('../../Imagenes/caballo.jpg')"
             }
-        });
+        })
+    </script> -->
+
+    <div id="wrap">
+        <p id="texto">Pulsa Alt+F12</p>
+    </div>
+
+
+
+    <script>
+        document.addEventListener("keydown", function(event){
+            let tecla = event.key
+            if(tecla == "F12" && event.altKey){
+                document.querySelector("#wrap").style.backgroundImage = "url('../../Imagenes/caballo.jpg')"
+            }
+        })
     </script>
 </body>
 </html>

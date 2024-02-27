@@ -1,0 +1,38 @@
+<!-- Partindo dun parágrafo calquera, ó facer clic no botón que terá á súa dereita, 
+o parágrafo debe desaparecer.
+
+Continuamos co exercicio anterior: ó facer clic no botón, o parágrafo debe desaparecer. Pero
+se volvemos a pulsar, debe aparecer de novo. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <p id="parrafo">Este parrafo va a desaparecer</p>
+    <input id="desaparicion" type="button" value="Desaparecer">
+
+    <script>
+        
+        let contador = true;
+
+        $("#desaparicion").click(function(){
+
+            if(contador){
+                $("#parrafo").fadeOut();
+                contador = false;
+            }else{
+                $("#parrafo").fadeIn();
+                contador = true;
+            }
+        });
+    </script>
+</body>
+</html>
