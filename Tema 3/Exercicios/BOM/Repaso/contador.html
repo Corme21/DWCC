@@ -1,0 +1,64 @@
+<!-- Prepara unha web que simule un contador de 60 segundos en tamaño grande.
+O contador comenzara a contar no momento que se pulse o div que conten 60 segundos
+Cando chegue a 0 amosara unha sinal de STOP e ao lado outra que se a pulsamos reiniciara
+o contador a 60 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Contador regresivo</title>
+</head>
+<style>
+    #comienzo{font-size: 50px;}
+    #conteo{font-size: 50px;}
+    #stop{display: none;}
+    #reinicio{display: none;}
+</style>
+<body>
+    <div id="comienzo">60 segundos</div>
+
+    <div id="conteo"></div>
+
+    <div id="stop"><img src="../../Imagenes/STOP.png" alt="stop"></div> 
+    <div id="reinicio"><img src="../../Imagenes/Reinicio.jpg" alt="reinicio" height="250" width="250"></div>
+
+    <script>
+        let contador = 60;
+
+        $("#comienzo").click(function(){
+            $("#comienzo").hide("slow");
+
+            for(let i = 60; i > 0; i--){
+                console.log(contador);
+
+                $("#conteo").text(contador + "Segundos");
+                $("#conteo").fadeIn("slow");
+                
+                    $("#conteo").fadeOut("slow");
+                
+                contador--;
+            }
+            if(contador == 0){
+                $("#conteo").text(contador + "Segundos");
+                $("#conteo").fadeIn("slow");
+                $("#stop").fadeIn("slow").css({"display" : "block"});
+                $("#reinicio").fadeIn("slow").css({"display" : "block"});
+
+                $("#reinicio").click(function(){
+                    $("#stop").hide("slow");
+                    $("#reinicio").hide("slow");
+                    $("#conteo").hide("slow");
+                    contador = 60;
+                    $("#comienzo").show("slow");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
