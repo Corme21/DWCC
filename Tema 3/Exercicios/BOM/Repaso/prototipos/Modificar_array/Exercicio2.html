@@ -1,0 +1,53 @@
+<!-- Ordenación personalizada: implementa unha función que ordena unha matriz de obxectos
+por unha propiedade específica. Exemplo: números de maior a menor.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <input id="numero" type="number">
+    <input id="introducir" type="button" value="Introducir en array">
+    <input id="ordenar" type="button" value="Ordenar de mayor a menor"><br><br>
+
+    <div id="ordenado"></div>
+
+    <script>
+        let array = [];
+        
+        $("#introducir").click(function(event){
+            let valor = document.querySelector("#numero").value
+            array.push(valor);
+            valor.value = 0;
+            
+        });
+
+        $("#ordenar").click(function(){
+            Array.prototype.ordenarMayor = function(){
+                let arrayOrdenado = [];
+
+                for(let i = 0; i < this.length; i++){
+                    if(this[i] < this[i + 1]){
+                        arrayOrdenado.push(this[i]);
+                    }else{
+                        arrayOrdenado.unshift(this[i]);
+                    }
+                }
+
+                console.log(arrayOrdenado)
+
+                $("#ordenado").text(arrayOrdenado);
+            }
+            array.ordenarMayor(array);
+        });
+        
+    </script>
+</body>
+</html>

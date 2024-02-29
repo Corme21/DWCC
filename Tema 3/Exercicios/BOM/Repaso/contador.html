@@ -45,7 +45,7 @@ o contador a 60 -->
                 contador--;
             }
             if(contador == 0){
-                $("#conteo").text(contador + "Segundos");
+                $("#conteo").text(contador + "Segundos").css({"color": "red"});
                 $("#conteo").fadeIn("slow");
                 $("#stop").fadeIn("slow").css({"display" : "block"});
                 $("#reinicio").fadeIn("slow").css({"display" : "block"});
