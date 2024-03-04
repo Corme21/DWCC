@@ -25,8 +25,6 @@ por unha propiedade específica. Exemplo: números de maior a menor.  -->
         $("#introducir").click(function(event){
             let valor = document.querySelector("#numero").value
             array.push(valor);
-            valor.value = 0;
-            
         });
 
         $("#ordenar").click(function(){
@@ -45,7 +43,7 @@ por unha propiedade específica. Exemplo: números de maior a menor.  -->
 
                 $("#ordenado").text(arrayOrdenado);
             }
-            array.ordenarMayor(array);
+            array.ordenarMayor();
         });
         
     </script>

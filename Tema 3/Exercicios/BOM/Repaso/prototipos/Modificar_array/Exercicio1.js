@@ -3,19 +3,28 @@ Eliminar duplicados: escribe unha función que tome unha matriz e devolva unha n
 matriz sen elementos duplicados.
 */
 
-let array = [1, 2, 3, 3, 4, 5, 5];
+let numeros = [1, 2, 3, 4, 5, 5, 3];
 
 Array.prototype.sinDuplicar= function (){
     let arrayLimpio = [];
 
     for(let i = 0; i < this.length; i++){
-        if(this[i] != this[i - 1]){
-            arrayLimpio.push(this[i]);
+        var duplicado = false;
+
+        for(let a = 0; a < i; a++){
+            if(this[i] == this[a]){
+                duplicado = true;
+                break;
+            }
+        }
+        
+        if(!duplicado){
+            arrayLimpio.push(this[i]); 
         }
     }
 
     console.log(arrayLimpio);
 }
 
-console.log(array);
-array.sinDuplicar(array);
+console.log(numeros);
+numeros.sinDuplicar();
