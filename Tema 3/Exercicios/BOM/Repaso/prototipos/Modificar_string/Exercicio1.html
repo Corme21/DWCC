@@ -1,0 +1,49 @@
+<!-- Contar vogais: crea unha función que conte cantas vogais hai nunha cadea de texto. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <input id="cadena" type="text">
+    <input id="contar" type="button" value="Contar vocales">
+
+    <div id="total"></div>
+
+    <script>
+        let contardor = 0;
+
+        $("#contar").click(function(event){
+            let texto = document.querySelector("#cadena").value;
+
+            String.prototype.vocales = function(contador){
+
+                for(let i = 0; i < this.length; i++){
+                    if(this[i] == "a"){
+                        contardor++;
+                    }else if(this[i] == "e"){
+                        contardor++;
+                    }else if(this[i] == "i"){
+                        contardor++;
+                    }else if(this[i] == "o"){
+                        contardor++;
+                    }else if(this[i] == "u"){
+                        contardor++;
+                    }
+                }
+
+                $("#total").text(contador);
+            }
+
+            texto.vocales(contardor);
+        });
+    </script>
+</body>
+</html>

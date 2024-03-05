@@ -13,6 +13,22 @@
     <title>Exercicio 4</title>
 </head>
 <body>
-    
+    <script>
+        let multi = [[1,2], [5,4], [3,6]];
+
+        Array.prototype.aplanar = function(){
+            let unico = [];
+
+            for(let i = 0; i < this.length; i ++){
+                for(let a = 0; a < this[i].length; a ++){
+                    unico.push(this[i][a]);
+                }
+            }
+            console.log(unico);
+        }
+
+        multi.aplanar();
+        
+    </script>
 </body>
 </html>
