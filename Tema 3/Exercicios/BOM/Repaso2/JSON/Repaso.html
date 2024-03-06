@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    div {display: none;}
+</style>
+<body>
+    <div id="empresa1"></div><br>
+    <!-- <div id="empresa2"></div> -->
+
+    <script>
+        var empresa= {"Nome":"Alonso S.L.", "CIF":"G1513648", 
+        "Direccion":"Rúa Areal, 24. 15150. A Coruña","Telefono":"9817385444"};
+
+        var empresaDT = JSON.parse(JSON.stringify(empresa));
+
+        // Exercicio 1
+        // empresaDT.guardarValores= function(Nome, Cif, Direccion, Telefono){
+        //     this.Nome = Nome;
+        //     this.CIF = CIF;
+        //     this.Direccion = Direccion;
+        //     this.Telefonon = Telefono;
+        // }
+
+        // empresaDT.imprimir = function(){
+        //     document.write(this.Nome + "<br>");
+        //     document.write(this.CIF + "<br>");
+        //     document.write(this.Direccion + "<br>");
+        //     document.write(this.Telefono + "<br>");
+        // }
+
+        // empresaDT.imprimir();
+
+        // Exercicio 2
+
+        empresa.guardarValores= function(Nome, CIF, Direccion, Telefono){
+            this.Nome = Nome;
+            this.CIF = CIF;
+            this.Direccion = Direccion;
+            this.Telefonon = Telefono;
+        }
+
+        empresa.imprimir = function(){
+            document.write(this.Nome + "<br>");
+            document.write(this.CIF + "<br>");
+            document.write(this.Direccion + "<br>");
+            document.write(this.Telefono + "<br>");
+            document.write("<br>");
+        }
+
+        let empresas = [];
+
+        for(let i = 0; i < 2; i++){
+            var masEmpresas = Object.create(empresa);
+            let nome = prompt();
+            let CIF = prompt();
+            let Direccion = prompt();
+            let Telefono = prompt();
+            masEmpresas.guardarValores(nome, CIF, Direccion, Telefono);
+            empresas.push(masEmpresas);
+        }
+
+        for(let a = 0; a < 2 ; a++){
+            empresas[a].imprimir();
+        }
+    </script>
+</body>
+</html>
