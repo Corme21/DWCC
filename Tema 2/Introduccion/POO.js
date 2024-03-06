@@ -215,7 +215,7 @@ console.log(er4.test("tapon"));//True
 let er5 = /ar.on/;
 console.log(er5.test("arcon"));//True
 console.log(er5.test("arpon"));//True
-console.log(er5.test("Aaron"));
+console.log(er5.test("Aaron"));//False
 //Modificador []
 let er6 = /aeiou/;
 console.log(er6.test("SOS"));//False
