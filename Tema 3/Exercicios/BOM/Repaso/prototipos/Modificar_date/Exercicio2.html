@@ -1,0 +1,28 @@
+<!-- É ano bisiesto: crea unha función que determine se un ano determinado é bisiesto ou non. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <script>
+        let ano = prompt("Escribe un año");
+
+        Date.prototype.bisiesto = function(ano){
+            if(ano % 4 == 0 && ano % 100 !== 0 || ano % 400 == 400){
+                console.log("Es bisiesto");
+            }else{
+                console.log("No es bisiesto");
+            }
+        }
+
+        let fecha = new Date();
+
+        fecha.bisiesto(ano);
+    </script>
+</body>
+</html>

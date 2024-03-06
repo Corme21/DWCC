@@ -1,0 +1,58 @@
+<!-- Día da semana: implementa unha función que devolve o día da semana para unha data
+determinada. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+</head>
+
+<body>
+    <script>
+        let semana = new Date(2002, 12, 23);
+
+        Date.prototype.diaSemana = function () {
+            let dia = this.getDay();
+
+            switch (dia) {
+                case 0:
+                    console.log("Domingo");
+                    break;
+                
+                case 1:
+                    console.log("Lunes");
+                    break; 
+                
+                case 2:
+                    console.log("Martes");
+                    break; 
+                
+                case 3:
+                    console.log("Miercoles");
+                    break; 
+                    
+                case 4:
+                    console.log("Xoves");
+                    break;
+                
+                case 5:
+                    console.log("Venres");
+                    break;
+                
+                case 6:
+                    console.log("Sabado");
+                    break;
+            }
+        }
+
+
+
+        fecha.diaSemana(semana);
+    </script>
+</body>
+
+</html>
