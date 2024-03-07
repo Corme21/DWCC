@@ -1,0 +1,68 @@
+<!-- Define un obxecto JSON para que se almacene unha aula do centro cos seguintes datos:
+
+Nome: Radio.
+Ubicación: 1º Planta. 
+Ocupada: True
+Data de fin de ocupación: 09-03-2024
+
+• Define o obxecto no formato JSON estándar. 
+• Converte este obxecto nun obxecto Object de Javascript.
+• Xera un Array con este tipo de obxecto creado e carga cun bucle For, e carga no array 2 
+aulas máis.
+• Finalmente, imprime o seu contido. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 5</title>
+</head>
+<body>
+    <script>
+    
+        let array = [];
+        
+        // Defino el JSON con los datos
+        let datos = {"Nome":"Radio", "Ubicacion":"1º Planta", "Ocupacion":"True", 
+        "Data de fin de ocupacion":"09-03-2024"};
+
+        // Lo convierto en JavaScript
+        let aula = JSON.parse(JSON.stringify(datos));
+
+        aula.guardarDatos = function(Nome, Ubicacion, Ocupacion, Data){
+            this.Nome = Nome;
+            this.Ubicacion = Ubicacion;
+            this.Ocupacion = Ocupacion;
+            this.Data = Data;
+        };
+
+        aula.imprimirDatos = function(Nome, Ubicacion, Ocupacion, Data){
+            document.write(this.Nome + "<br>");
+            document.write(this.Ubicacion + "<br>");
+            document.write(this.Opcupacion + "<br>");
+            document.write(this.Data + "<br>");
+            document.write("<br>");
+        }
+
+        
+        array.push(aula.guardarDatos());
+        console.log(array);
+
+        for(let i = 0; i < 2; i++){
+            var nuevaAula = Object.create(datos);
+            let Nome = prompt("Introduce el nombre del aula");
+            let Ubicacion = prompt("Introduce la ubicacion del aula");
+            let Ocupacion = prompt("Esta ocupada?");
+            let Data = prompt("Introduce la fecha de fin de ocupacion");
+            nuevaAula.guardarDatos(Nome, Ubicacion, Ocupacion, Data);
+            array.push(nuevaAula);
+        }
+
+        for(let a = 0; a < array.length; a++){
+            array[a].imprimirDatos();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- Dado o parágrafo que che mostramos a continuación. 
+
+“A informática cuántica é unha disciplina de ciencia da computación que se ocupa de 
+desenvolver algoritmos, computadores e dispositivos para traballar con bits cuánticos. 
+Esta tecnoloxía promete ás súas usuarias unha potencia informática sen precedentes, 
+que poderían cambiar o xeito no que o mundo trata coa información”. 
+
+Cando pulses sobre el debe cambiar a cor de fondo a vermello e a cor da letra a branca. 
+Aos dez segundos debe cambiar ao seu estado por defecto.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 1</title>
+</head>
+<body>
+    <!-- Este es el texto proporcionado -->
+    <p id="texto">A informática cuántica é unha disciplina de ciencia da computación que se ocupa de desenvolver 
+        algoritmos, computadores e dispositivos para traballar con bits cuánticos. Esta tecnoloxía promete 
+        ás súas usuarias unha potencia informática sen precedentes, que poderían cambiar o xeito no que o 
+        mundo trata coa información.
+    </p>
+
+    <script>
+        // Cuando se haga click en el texto, el fondo de la pagina cambiara a ser rojo y el texto blanco
+        $("#texto").click(function(){
+            $("body").css({"background" : "red"});
+            $("#texto").css({"color" : "white"});
+
+            // Una vez pasado 10 segundos, volvera al estado inicial
+            setTimeout(function(){
+                $("body").css({"background" : "white"});
+                $("#texto").css({"color" : "black"});
+            }, 10000);
+        });
+    </script>
+</body>
+</html>

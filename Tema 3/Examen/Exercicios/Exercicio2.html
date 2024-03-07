@@ -1,0 +1,54 @@
+<!-- Crea un listado de webs dinámico e de interese para o usuario. O que se pretende é que un input 
+recolla unha páxina web. Ao darlle ao botón inserir (non será un botón ao uso, será a imaxe 
+facilitada neste exame co nome boton.jpg) validará se é unha url, e no caso de que sexa, esta 
+pasará a un div con fondo verde e letras brancas pero, só pasará o nome do dominio.
+
+Se a url non é válida, non pasa ao div e avisarase cunha mensaxe que sairá debaixo do input ao 
+usuario mediante un fadeIn. 
+
+Exemplo: http://www.corme.net ----------pasa ao div como corme.net (foi validada como url) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Exercicio 2</title>
+</head>
+<body>
+    <input id="cadena" type="text"><br>
+
+    <div id="boton"><img src="../Imagenes/boton.jpg" alt="boton" height="200" width="250"></div><br><br>
+
+    <div id="urls"></div>
+
+    <script>
+
+        // Cuando pulsan el boton, compruebo si la url es valida
+        $("#boton").click(function(){
+            let pagina = document.querySelector("#cadena").value;
+            
+            // Creo una expresion regular para saber si es una URL valida
+            let exURL = /^https?+\:+\/\/+w{3}+\.+[A-Za-z]+\.+[a-z]{2,4}$/;
+
+            // Si lo es, envio la URL a un div que tendra el fondo verde y las letras blancas
+            // Si no es valida, no se enviara al div y aparecera un aviso
+            if(exURL.test(pagina) == true){
+                $("#urls").text(pagina);
+                $("#urls").css({"background" : "green", "color" : "white"});
+            }else{
+                let pagina = document.querySelector("#cadena");
+
+                let aviso = document.createElement("p");
+                aviso.textContent("No es una URL");
+                pagina.append(aviso);
+            }
+        });
+        
+    </script>
+</body>
+</html>

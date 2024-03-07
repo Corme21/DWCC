@@ -1,0 +1,38 @@
+<!-- Utilizando patróns modifica o obxecto String para que poida comprobar se un obxecto cadea 
+contén ou non números no seu interior -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+</head>
+<body>
+    <script>
+        // Pido por pantalla un texto cualquiera
+        let texto = prompt("Escribe algo");
+
+        // Creo el prototipo String
+        String.prototype.numeros = function(){
+
+            // Creo una expresion regular para poder identificar los numeros que pueda haber en la cadena
+            let exNumeros = /[0-9]/;
+
+            // Si la cadena tiene numeros, imprimira en el documento que tiene numeros
+            if(exNumeros.test(this) == true){
+                document.write("La cadena contiene numeros");
+
+                // Si no los tiene, imprimira en el documento que no tiene numeros
+            }else{
+                document.write("La cadena no contiene numeros");
+            }
+            
+        }
+
+        // Llamo a la funcion
+        texto.numeros();
+    </script>
+</body>
+</html>
