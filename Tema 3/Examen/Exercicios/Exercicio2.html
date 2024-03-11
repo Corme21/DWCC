@@ -33,7 +33,7 @@ Exemplo: http://www.corme.net ----------pasa ao div como corme.net (foi validada
             let pagina = document.querySelector("#cadena").value;
             
             // Creo una expresion regular para saber si es una URL valida
-            let exURL = /^https?+\:+\/\/+w{3}+\.+[A-Za-z]+\.+[a-z]{2,4}$/;
+            let exURL = /^(http(s)?:\/\/)+([w]{3}[\.])+[a-z0-9]+[\.][a-z]{2,3}$/;
 
             // Si lo es, envio la URL a un div que tendra el fondo verde y las letras blancas
             // Si no es valida, no se enviara al div y aparecera un aviso
@@ -44,7 +44,7 @@ Exemplo: http://www.corme.net ----------pasa ao div como corme.net (foi validada
                 let pagina = document.querySelector("#cadena");
 
                 let aviso = document.createElement("p");
-                aviso.textContent("No es una URL");
+                aviso.textContent= "No es una URL";
                 pagina.append(aviso);
             }
         });
