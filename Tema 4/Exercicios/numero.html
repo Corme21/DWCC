@@ -1,0 +1,49 @@
+<!-- Elabora un programa que pidaun nnumero entre 2 e 10 e xere un array dese tamaño que teña 
+0 no seu interior. A creación do array debe ser feito dentro dunha funcion que recibira por 
+parametro numero. Se o numero non e 2 ou 10 lanzara un error de rango que debe ser capturado
+So ese tipo de error-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Error rango</title>
+</head>
+<body>
+    <input type="text" id="numero">
+    <input type="button" id="boton" value="Comprobar">
+
+    <script>
+        $("#boton").click(function(){
+            let numero = document.querySelector("#numero").value;
+            
+            try {
+                arrayNumero(numero);
+            } catch (error) {
+                console.log(`${error.name}: ${error.message}`);
+                console.log("Por favor, vuelve a introdicir un numero");  
+            }
+        });
+
+        function arrayNumero(numero){   
+            let array = [];
+
+            if(numero >= 2 && numero <= 10){
+                
+                for(let i = 0; i < numero; i++){
+                    array.push(0);
+                }
+
+                console.log(array);
+            }else{
+                throw new RangeError("Valor incorrecto para la nota");
+            }
+        }
+    </script>
+</body>
+</html>

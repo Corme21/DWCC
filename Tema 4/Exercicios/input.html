@@ -1,0 +1,38 @@
+<!-- Elaborar un programa que nun input que recibira un numero entre o 1 e o 10.
+Se non esta entre o 1 eo 10, lanzamos un error de tipo Error coa mensaxe "O numero non é do 1 
+ao 10". No catch debe lanzar por consola a mensaxe -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Error de input</title>
+</head>
+<body>
+    <input type="text" id="numero">
+    <input type="button" id="boton" value="Comprobar">
+
+    <script>
+        $("#boton").click(function(){
+            let error = new Error("O non numero é do 1 ao 10");
+
+            let numero = document.querySelector("#numero").value;
+
+            try {
+               if(numero >= 1 && numero <= 10){
+                    console.log("El numero esta entre el 1 y el 10");
+                }else{
+                    throw error;
+                }
+            } catch (error) {
+                console.log(error.message);
+            }
+        });
+    </script>
+</body>
+</html>

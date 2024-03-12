@@ -8,17 +8,29 @@
 </head>
 <body>
     <script>
-        let error = new Error("Formato incorrecto");
-        // console.log(`Mensaje de error: ${error.message}`);
-        // console.log(`Nombre del error: ${error.name}`);
-        // throw error;
+        // let error = new Error("Formato incorrecto");
+        // // console.log(`Mensaje de error: ${error.message}`);
+        // // console.log(`Nombre del error: ${error.name}`);
+        // // throw error;
+
+        // try {
+        //     throw error;
+        // } catch (error) {
+        //     console.log(error);
+        // }
+        
+        function compruebaNota(n) {
+            if(n < 0 || n > 10){
+                throw new RangeError("Valor incorrecto para la nota");
+            }
+        }
 
         try {
-            throw error;
+            compruebaNota(21);
         } catch (error) {
-            console.log(error);
+            console.log(`${error.name}: ${error.message}`);
+            console.log("Por favor, vuelve a introdicir un valor para la nota");
         }
-        
     </script>
 </body>
 </html>
