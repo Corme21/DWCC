@@ -1,0 +1,37 @@
+<!-- Escribe unha función que tome dous números como argumentos e devolva o resultado de
+dividir o primeiro entre o segundo. Use un bloque try-catch para tratar o caso de tentar
+dividir por cero. (Consultar tipos de erro) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let primeiro = prompt("Escribe un numero");
+        let segundo = prompt("Escribe otro numero");
+
+        function dividir(primero, segundo){
+            if(primeiro > 0 && segundo > 0){
+                let resultado = primeiro / segundo;
+
+                console.log(resultado);
+            }else{
+                throw new RangeError("Valor no valido");
+            }
+        }
+
+        try {
+            dividir(primeiro, segundo);
+        } catch (error) {
+           if(error instanceof RangeError){
+            console.log("El valor no puede ser 0");
+           }
+        }
+    </script>
+</body>
+</html>
