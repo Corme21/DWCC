@@ -1,0 +1,40 @@
+<!-- Define unha función que toma unha matriz e un índice como argumentos e devolve o
+elemento nese índice. Xestiona calquera erro que poida ocorrer se o índice está fóra do
+intervalo da matriz. (erro de intervalos). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz e indice</title>
+</head>
+<body>
+    <script>
+        let array = [1, 2, 3];
+
+        let indice = 2;
+
+        const acceso = (array, indice) =>{
+            try {
+
+                if(indice < array.length && indice >= 0){
+
+                    var resultado = array[indice];
+
+                    console.log(resultado); 
+                }else{
+                    throw new RangeError("Indice no valido");
+                }
+                
+            } catch (error) {
+                console.log(error.message);
+            }
+        }
+
+        acceso(array, indice);
+        
+    </script>
+</body>
+</html>

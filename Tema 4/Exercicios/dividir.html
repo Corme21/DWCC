@@ -11,27 +11,52 @@ dividir por cero. (Consultar tipos de erro) -->
     <title>Document</title>
 </head>
 <body>
+    <input type="number" id="primero">
+    <input type="number" id="segundo">
+
+    <input type="button" id="dividir" value="Calcular">
+
+
     <script>
-        let primeiro = prompt("Escribe un numero");
-        let segundo = prompt("Escribe otro numero");
+        // let primeiro = prompt("Escribe un numero");
+        // let segundo = prompt("Escribe otro numero");
 
-        function dividir(primero, segundo){
-            if(primeiro > 0 && segundo > 0){
-                let resultado = primeiro / segundo;
+        // function dividir(primero, segundo){
+        //     if(primeiro > 0 && segundo > 0){
+        //         let resultado = primeiro / segundo;
 
-                console.log(resultado);
-            }else{
-                throw new RangeError("Valor no valido");
+        //         console.log(resultado);
+        //     }else{
+        //         throw new RangeError("Valor no valido");
+        //     }
+        // }
+
+        // try {
+        //     dividir(primeiro, segundo);
+        // } catch (error) {
+        //    if(error instanceof RangeError){
+        //     console.log("El valor no puede ser 0");
+        //    }
+        // }
+
+        document.querySelector("#dividir").onclick = () => {
+            try {
+                const primeiro = document.querySelector('#primero').value;
+                const segundo = document.querySelector('#segundo').value;
+
+                if (primeiro > 0 && segundo > 0) {
+                    let resultado = primeiro / segundo;
+
+                    console.log(resultado);
+                }else{
+                    throw new RangeError("Valor no valido");
+                }
+            } catch (error) {
+                if(error instanceof RangeError){
+                    console.log("El valor no puede ser 0");
+                }
             }
-        }
-
-        try {
-            dividir(primeiro, segundo);
-        } catch (error) {
-           if(error instanceof RangeError){
-            console.log("El valor no puede ser 0");
-           }
-        }
+        };
     </script>
 </body>
 </html>

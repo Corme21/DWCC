@@ -1,0 +1,56 @@
+<!-- Crea unha función que converta unha cadea en número. Xestiona calquera erro que poida
+ocorrer durante a conversión. (erro xenérico).  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Conversion</title>
+</head>
+<body>
+    <input type="text" id="cadena">
+    <input type="button" id="cambio" value="Convertir">
+
+    <script>
+        // document.querySelector("#cambio").onclick = () => {
+        //     try {
+        //         let cadea = document.querySelector("#cadena").value;
+                
+        //         if(isNaN(cadea)){
+        //             throw new error("Cadena no valida");
+        //         }else{
+                    
+        //         }
+        //     } catch (error) {
+        //         console.log(error);
+        //     }
+        // }
+
+        const convertirANumero = (cadena) => {
+            try {
+                const numero = Number(cadena);
+                if (isNaN(numero)) {
+                    throw new Error('Non se pode convertir a cadea nun número');
+                } else {
+                    return numero;
+                }
+
+
+            } catch (error) {
+                return error.message;
+            }
+        }
+
+
+        // Ejemplo de uso:
+        document.write(convertirANumero('123') + "<br>");
+        document.write(convertirANumero('abc') + "<br>");
+        document.write(convertirANumero('10.5'));
+    </script>
+</body>
+</html>
