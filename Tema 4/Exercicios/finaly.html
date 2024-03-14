@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="primero">
+    <input type="number" id="segundo">
+
+    <input type="button" id="dividir" value="Calcular">
+
+
+    <script>
+
+        document.querySelector("#dividir").onclick = () => {
+            try {
+                const primeiro = document.querySelector('#primero').value;
+                const segundo = document.querySelector('#segundo').value;
+
+                if (primeiro > 0 && segundo > 0) {
+                    let resultado = primeiro / segundo;
+
+                    console.log(resultado);
+                }else{
+                    throw new RangeError("Valor no valido");
+                }
+            } catch (error) {
+                if(error instanceof RangeError){
+                    console.log("El valor no puede ser 0");
+                }
+            } finally{
+                console.log("Executome con ou sin erro");
+            }
+        };
+    </script>
+</body>
+</html>
