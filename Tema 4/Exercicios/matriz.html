@@ -12,9 +12,9 @@ intervalo da matriz. (erro de intervalos). -->
 </head>
 <body>
     <script>
-        let array = [1, 2, 3];
+        let array = [1, 2, 3, 21];
 
-        let indice = 2;
+        let indice = 3;
 
         const acceso = (array, indice) =>{
             try {
@@ -30,6 +30,8 @@ intervalo da matriz. (erro de intervalos). -->
                 
             } catch (error) {
                 console.log(error.message);
+            }finally{
+                console.log("Intentouse acceder ao array");
             }
         }
 
