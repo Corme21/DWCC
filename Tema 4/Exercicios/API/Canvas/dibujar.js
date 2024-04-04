@@ -31,6 +31,18 @@ linea5.stroke();
 
 var linea5 = c.getContext("2d");
 linea5.strokeStyle = "red";
-linea5.moveTo(200, 120);
-linea5.lineTo(120, 120);
+linea5.moveTo(120, 120);
+linea5.lineTo(160, 180);
 linea5.stroke();
+
+var linea6 = c.getContext("2d");
+linea6.strokeStyle = "red";
+linea6.moveTo(60, 120);
+linea6.lineTo(90, 180);
+linea6.stroke();
+
+var linea6 = c.getContext("2d");
+linea6.strokeStyle = "red";
+linea6.moveTo(60, 120);
+linea6.lineTo(90, 180);
+linea6.stroke();
