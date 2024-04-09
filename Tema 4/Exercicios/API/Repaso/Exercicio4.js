@@ -7,3 +7,7 @@ Unha vez almacenados, pide por teclado o nome que queiras eliminar. Se o atopa, 
 atopa deberás indicar que non foi atopado. 
 */
 
+let nomeBarco = prompt("Introduce o nome do barco");
+
+let anoConstr = prompt("Introduce o ano de construccion");
+

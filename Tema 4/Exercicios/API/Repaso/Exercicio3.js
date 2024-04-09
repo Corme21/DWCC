@@ -18,7 +18,6 @@ localStorage.setItem("clave", JSON.stringify(info));
 var datos = JSON.parse(localStorage.getItem("clave"));
 
 for(const barco in datos){
-    
     document.write(`${barco}: ${datos[barco]}<br>`);
 }
 
