@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type='text/javascript' src='../../../jquery-1.7.js'></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <title>Xeolocalización</title>
+</head>
+<body>
+    <div id="datos"></div>
+
+    <script>
+        let fecha = new Date();
+
+        let mes = fecha.getMonth();
+
+        console.log(mes);
+
+        if(mes == 3){    
+            navigator.geolocation.getCurrentPosition(posicion=>{
+                $("#datos").text(`Lonxitude: ${posicion.coords.longitude}; Latitude: ${posicion.coords.latitude}; 
+                Mes: Abril`) 
+            });
+        }
+    </script>
+</body>
+</html>
