@@ -7,5 +7,3 @@ let nombre = prompt("Escribe tu nombre");
 localStorage.setItem(nombre, actual);
 
 document.write(localStorage.getItem(nombre));
-
-

@@ -4,7 +4,11 @@ var persona = new datos (
 );
 
 try {
-    
+    if(persona.edad){
+        document.write(persona.edad);
+    }else{
+        throw new Error;
+    }
 } catch (error) {
     document.write("Non se encontrou a propiedade");
 }finally{

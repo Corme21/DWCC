@@ -17,8 +17,6 @@
 
         let mes = fecha.getMonth();
 
-        console.log(mes);
-
         if(mes == 3){    
             navigator.geolocation.getCurrentPosition(posicion=>{
                 $("#datos").text(`Lonxitude: ${posicion.coords.longitude}; Latitude: ${posicion.coords.latitude}; 
