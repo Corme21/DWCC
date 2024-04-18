@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emoticono Sonriente</title>
+<style>
+    canvas {
+        border: 1px solid black;
+    }
+</style>
+</head>
+<body>
+<canvas id="canvas" width="400" height="400"></canvas>
+<script>
+
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+
+    // Cara
+    ctx.beginPath();
+    ctx.arc(200, 200, 150, 0, Math.PI * 2);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+
+    // tercer ojo
+    ctx.beginPath();
+    ctx.arc(200, 100, 20, 0, Math.PI * 2);
+    ctx.arc(260, 150, 20, 0, Math.PI * 2);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+
+    // tercer ojo
+    ctx.beginPath();
+    ctx.arc(200, 100, 10, 0, Math.PI * 2);
+    ctx.arc(260, 150, 10, 0, Math.PI * 2);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+    // Ojos normales
+    ctx.beginPath();
+    ctx.arc(140, 150, 20, 0, Math.PI * 2);
+    ctx.arc(260, 150, 20, 0, Math.PI * 2);
+    ctx.fillStyle = 'white';
+    ctx.fill();
+
+    // Ojos normales
+    ctx.beginPath();
+    ctx.arc(140, 150, 10, 0, Math.PI * 2);
+    ctx.arc(260, 150, 10, 0, Math.PI * 2);
+    ctx.fillStyle = 'black';
+    ctx.fill();
+
+    // Nariz
+    ctx.beginPath();
+    ctx.arc(200, 190, 10, 10, Math.PI,true);
+    ctx.strokeStyle = 'black';
+    ctx.fill();
+
+    // Boca
+    ctx.beginPath();
+    ctx.arc(200, 200, 100, 0, Math.PI);
+    ctx.lineWidth = 10;
+    ctx.strokeStyle = 'black';
+    ctx.stroke();
+</script>
+</body>
+</html>
